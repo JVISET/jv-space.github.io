@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%;
+    height: 100%;
+    width: 100vw;
+
+    margin: 0%;
+    padding: 0%;
+    
+    scroll-behavior: smooth;
+  }
+
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
+  }
+  
+  body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  .container_contents {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    align-content: center;
+    left: 0%;
+    border: #000 5px solid;
+    
+  }
+
+    /* -------------------------------------------------------------------------------------------------------------- */
+
+  .pageHeader {
+    position: relative;
+    width:100%;
+    padding: 0.5% 6% 0% 6%;
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 5px solid black;
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#0a0a0a 0.6000000000000001px, #ffffff 0.6000000000000001px);
+    background-size: 12px 12px;
+
+    /* border: #1820EF solid 1px; */
+  }
+
+  .img_logo_head {
+    position: relative;
+    height: 4vw;
+    order: 1;
+
+    /* border: 1px solid red; */
+  }
+
+  .textBox_contact {
+    position: relative;
+    top: 55%;
+    height: 4vw;
+    order: 2;
+    margin-top: 1%;
+
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 200;
+
+    /* border: 1px solid red; */
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------- */
+
+  .pageNav {
+    position: relative;
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    padding: 0% 5% !important;
+    z-index: 2;
+
+    /* border: 1px solid red; */
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .pageNav {
+      padding: 0% 5% 3% 5% !important;
+    }
+    .textBox_contact {
+      font-size: 10px;
+    }
+  }
+  
+  #main_nav {
+    position: relative;
+    padding: 0%;
+
+    /* border: 1px solid blue !important; */
+  }
+
+  .flex-fill{
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    padding: 0% !important;
+
+    /* border: #FF4E42 1px solid; */
+  }
+
+  .nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0%;
+
+    padding: 0.5% 0;
+    margin: 0% !important;
+
+    /* border: green 1px solid; */
+  }
+
+  nav ul {
+    color:black !important;
+    padding: 0;
+    text-align: center;
+    margin:0;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+  }
+
+  .NavBar {
+    position: relative;
+    width: 100%;
+    
+    /* height: 7vh; */
+    padding: 1vw 4.7233vw 1vw 4.7233vw;
+    margin: 2% 0%;
+    
+    text-align: center;
+    vertical-align: middle;
+    display:inline-block;
+
+    background-color: transparent;
+    border: 2.5px solid black;
+    border-radius: 15px;
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
+    list-style-type: none;
+  }
+
+  .NavBar:hover {
+    box-shadow: 5px 5px #1820EF;
+    background-color: #ffc024;
+    transform: scale(1.05);
+    z-index: 1;
+  }
+
+  .NavBar:active {
+    box-shadow: 2px 2px #1820EF;
+    position: relative;
+    transform: translate(0.1em);
+  }
+
+  .nav-link {
+    position: relative;
+
+    margin:1% 0;
+    padding:0% 0%;
+
+    
+    color:black !important;
+    opacity: 1 !important;
+
+    text-align: center;
+    vertical-align: middle;
+    display:inline-block;
+
+    /* border: #FF4E42 1px solid; */
+  }
+
+  .NavBar h1 {
+    position: relative;
+    margin: 0.1vw 0 0 0;
+    padding: 0%;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    font-style: normal;
+    font-family: 'IBM Plex Mono', monospace;
+
+    /* border: 1px solid red; */
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------- */
+
+  .pageFooter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    margin: 0 !important;
+    padding: 0% 0% !important;
+    
+    display: block;
+    block-size: auto;
+
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 0.9;
+
+    border-top: #000 5px solid;
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#0a0a0a 0.6000000000000001px, #ffffff 0.6000000000000001px);
+    background-size: 12px 12px;
+
+    /* border: orange 1px solid; */
+  }
+
+  .pageFooter .container-xl {
+    position: relative;
+    width: 100%;
+
+    /* border: green 1px solid; */
+  }
+
+  .footer_logo img {
+    width: 100%;
+    max-width: 200px;
+    min-width: 120px;
+    height: auto;
+  }
+
+  .footer_site {
+    border-left: #000 solid 3px;
+    border-right: #000 solid 3px;
+    /* border: red 1px solid; */
+  }
+
+  .footer_logo a, .footer_site a, .footer_contact a {
+    margin: 1% 0;
+    padding: 1% 0;
+    font-size: 14px;
+    font-weight: 320;
+
+    /* border: blueviolet 1px solid; */
+  }
+
+  .footer_logo i, .footer_site , .footer_contact i {
+    font-weight: 100;
+  }
+
+ .footer-credit {
+  background: white !important;
+  border-top: #000 solid 4px;
+ }
+
+ .footer-credit p {
+  position: relative;
+
+  margin: 0.2% 6% 0 0;
+
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 18px;
+ }
+  
+  /* -------------------------------------------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------------------------------------------- */
+
+
+

@@ -17,21 +17,28 @@ Table of contents
 8. Contact
 --------------------------------------------- */
 
-html {font-family: 'Reno mono', sans-serif;}
+html {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+  /* border: #000 solid 5px; */
+}
+.big-box {
+  border: #000 solid 5px;
+}
 /* Typography */
 p, a {font-weight: 400;}
 .h2 {font-size: 40px;}
 .h3 {font-size: 28px;}
 .light-300 {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'IBM Plex Mono', monospace !important;
   font-weight: 300;
 }
 .regular-400 {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'IBM Plex Mono', monospace !important;
   font-weight: 400;
 }
 .semi-bold-600 {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'IBM Plex Mono', monospace !important;
   font-weight: 600;
 }
 .typo-space-line::after,
@@ -40,7 +47,7 @@ p, a {font-weight: 400;}
   width: 150px;
   display:block;
   position: absolute;
-  border-bottom:  5px solid #6266ea;
+  border-bottom:  5px solid black;
   padding-top: .5em;
 }
 .typo-space-line-center::after {
@@ -48,30 +55,46 @@ p, a {font-weight: 400;}
   margin-left: -75px;
 }
 /* Main Nav */
-#main_nav .nav-item .nav-link:hover {color: #fff;}
+/* #main_nav .nav-item .nav-link:hover {color: #fff;} */
 /* Home */
 #index_banner {
-  background-image: url('./../img/banner-bg-01.jpg');
+  /* background-image: url('./../img/banner-bg-01.jpg'); */
   background-position: center center; background-size: cover;
   height: 100%;
   min-height: 60vh;
   width: 100%;
 }
 #index_banner .carousel-item {
-  min-height: 60vh;
+  /* min-height: 60vh; */
 }
 #index_banner .carousel-control-prev i,
 #index_banner .carousel-control-next i {
-  color: #6266ea !important;
+  color: #000 !important;
+  opacity: 0.15;
   text-decoration: none;
   font-size: 4em;
 }
+#index_banner .carousel-control-prev i:active,
+#index_banner .carousel-control-next i:active {
+  color: #000 !important;
+  text-decoration: none;
+  font-size: 4em;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+  scale: 1.1;
+  opacity: 0.9;
+}
 #index_banner .carousel-inner {
-  height: 80vh;
+  height: 100%;
 }
 #index_banner .carousel-indicators li,
 #index_banner .carousel-indicators.active {
-  background-color: #6266ea !important;
+  width: 25px;
+  height: 10px;
+  background-color: #ffc024 !important;
+  border: #000 solid 0px;
+  border-radius: 4px;
+  transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
 }
 .service-wrapper .service-footer {
   max-width: 720px;
@@ -101,7 +124,7 @@ p, a {font-weight: 400;}
 }
 .recent-work .recent-work-vertical {
 	background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 33.333%, rgba(97,84,199,1) 66.666%, rgba(255,255,255,0) 99.999%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 33.333%, #fff 66.666%, rgba(255,255,255,0) 99.999%);
   background-size: 300% 300%;
   background-position: 0% 100%;
   transition: .5s;
@@ -135,12 +158,12 @@ p, a {font-weight: 400;}
   width: 8rem;
 }
 .partner-wap {
-  background-color: #7276ec;
+  background-color: black;
   transition: 1s;
   cursor: pointer;
 }
 .partner-wap:hover {
-  background-color: #b1b3f5;
+  /* background-color: #b1b3f5; */
 }
 .why-us {
   background: rgb(239,239,253);
@@ -186,7 +209,15 @@ p, a {font-weight: 400;}
   height: 150px
 }
 /* Footer */
+footer .text-light {
+  color: #000 !important;
+  
+}
 footer a.text-light:hover {
-  color: #bfbfbf !important;
+  color: #FF4E42 !important;
   transition-duration: 0.15s;
+}
+footer h3 {
+  color: #000 !important;
+  font-size: 24px;
 }
