@@ -54,6 +54,12 @@ p, a {font-weight: 400;}
   left: 50%;
   margin-left: -75px;
 }
+.navbar-toggler>.close {
+  display:inline;
+}
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+  display:none;
+}
 /* Main Nav */
 /* #main_nav .nav-item .nav-link:hover {color: #fff;} */
 /* Home */

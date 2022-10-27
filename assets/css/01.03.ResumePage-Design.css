@@ -2,20 +2,45 @@
     position: relative;
     width: 100%;
     
-    padding: 0.25% 0% 1% 0;
+    margin: 0% 0 0 0;
+    padding: 0;
     z-index: 2;
     align-items: stretch;
 
     /* border: 1px solid blue; */
   }
+  .tabSubNav a:hover {
+    text-decoration: none;
+  }
+
+  .tabSubNav a > li > h3 {
+    margin: 2% 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    font-weight:400;
+  }
+  
+  .tabSubNav a >li > h3:hover {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    font-weight:400;
+  }
 
   .container_subNav {
     position: relative;
-    padding: 0;
+    padding: 0.5% 2%;
     margin: 0%;
-    display: flex;
+    width: 100%;
+    height: auto;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 7px 7px;
+    background-image: repeating-linear-gradient(-45deg, #eeeeee 0, #eeeeee 0.7000000000000001px, #ffffff 0, #ffffff 50%);
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
+    /* border: 1px solid violet; */
   }
 
   .subNavBar {
@@ -32,24 +57,80 @@
     vertical-align: middle;
     align-items: stretch;
 
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 1vw;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 15px;
     transition: transform 0.25s cubic-bezier(.64,-0.01,.38,1);
     list-style-type: none;
+
+    z-index: 3;
   }
 
   .subNavBar:hover {
-    box-shadow: 4.5px 4.5px #FF4E42;
-    background-color: transparent;
-    transform: scale(1.03);
+    box-shadow: 2px 2px #1820EF;
+    background-color: black;
+    color: white;
+    transform: scale(1.01);
     z-index: 1;
+    text-decoration: none;
   }
 
   .subNavBar:active {
-    box-shadow: 2px 2px #1820EF;
+    border: 1px solid transparent;
+    background-color: #FF4E42;
+    box-shadow: 0px 0px #FF4E42;
     position: relative;
-    transform: translate(0.1em);
+    transform: scale(1.025);
+  }
+
+  .navbar-nav {
+    position: relative;
+    width: 100%;
+    margin: 0% !important;
+    
+    /* border: 1px solid red; */
+  }
+
+  /* Adjust narrow screen */
+  @media only screen and (max-width: 992px) {
+    .tabSubNav {
+      margin:3% 0 -5% 0;
+    }
+    .container_subNav {
+      padding: 0.5% 2%;
+      border: #000 2px solid;
+      border-radius: 15px;
+    }
+  }
+  /* Adjust wide screen */
+  @media only screen and (min-width: 992px) {
+    .tabSubNav {
+      width: 100%;
+      margin: 0% 1% 0% 1%;
+    }
+    .container_subNav{
+      position: relative;
+      left: -1%;
+      border: none;
+      background: white;
+      margin: 0%;
+      padding: 0%;
+    }
+    .tabSubNav .container_subNav #navbarSupportedContent a {
+      position: relative;
+      width: 100%;
+  
+      margin: 0% 0.5% !important;
+      padding: 0% !important;
+    }
+    .tabSubNav .container_subNav #navbarSupportedContent a > li {
+      margin: 0%;
+      padding: 1% 0%;
+      border: #000 2px solid;
+      border-radius: 15px;
+
+      /* border: 1px solid red; */
+    }
   }
 
   /* -------------------------------------------------------------------------------------------------------------- */
