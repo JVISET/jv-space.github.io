@@ -116,6 +116,7 @@ html {
   @media only screen and (max-width: 992px) {
     .pageNav nav ul li {
       border: 1.5px solid black;
+      /* margin: -50% 0; */
     }
   }
   
@@ -164,7 +165,6 @@ html {
     position: relative;
     width: 100%;
     
-    /* height: 7vh; */
     padding: 1vw 4.7233vw 1vw 4.7233vw;
     margin: 2% 0%;
     
@@ -228,9 +228,18 @@ html {
     margin: 1% 0;
     padding: 1% 0;
     width: 100%;
-    height: 20px;
+    height: 35px;
+    border-radius: 15px;
     transition: 1s ease-in-out;
+
+    opacity: 0.5;
+
+    align-items:center;
   }
+
+   .navbar-toggler:hover {
+    background: rgb(0, 0, 0, 0.2);
+   }
 
   @keyframes spin {
     0% {
@@ -259,10 +268,7 @@ html {
     width: 3%;
     background: rgb(138, 138, 138);
     border-radius: 3px;
-    opacity: 1;
-    left: 0%;
-    /* transform: rotate(90deg);
-    transition: 0.5 ease-in-out; */
+    opacity: 0.7;
   }
 
   /* .toggler-icon:active {
