@@ -122,6 +122,7 @@ html {
   #main_nav {
     position: relative;
     padding: 0% !important;
+    align-items: stretch;
 
     /* border: 1px solid blue !important; */
   }

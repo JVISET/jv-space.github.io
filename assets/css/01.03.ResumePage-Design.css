@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Silkscreen:wght@400;700&display=swap');
+
 .tabSubNav {
     position: relative;
     width: 100%;
@@ -94,7 +96,7 @@
   /* Adjust narrow screen */
   @media only screen and (max-width: 992px) {
     .tabSubNav {
-      margin:3% 0 -5% 0;
+      margin:3% 0 -3% 0;
     }
     .container_subNav {
       padding: 0.5% 2%;
@@ -106,7 +108,7 @@
   @media only screen and (min-width: 992px) {
     .tabSubNav {
       width: 100%;
-      margin: 0% 1% 0% 1%;
+      margin: 0% 1% auto 1%;
     }
     .container_subNav{
       position: relative;
@@ -167,9 +169,9 @@
 }
 
 .container_intro .introText {
-    position: relative;
+    position: absolute;
     top: 5%;
-    left: 15%;
+    right: 2%;
     width: fit-content;
     height: fit-content;
     z-index: 1;
@@ -181,10 +183,13 @@
 
 .container_intro .introText h1 {
     margin: 0%;
-    
+    display: flex;
+    flex-direction: row;
+
     color: #1820EF;
     font-weight: 400;
     font-family: 'Silkscreen', cursive;
+    font-size: 12rem !important;
     text-shadow: -10px 10px 0px #fff9e9,
                  -20px 20px 0px #ffe092,
                  -30px 30px 0px #ffd366;
@@ -194,35 +199,24 @@
 
 .container_intro .introText h1 span {
     position: relative;
-    margin: 0% -5%;
-    /* padding: 0% 0.1%; */
+    width: 100%;
+    margin: 0% 0%;
+
+    transition: 0.3s cubic-bezier(.64,-0.01,.38,1);
 
     /* border: 1px solid purple; */
 }
 
 .container_intro .introText h1 span:hover {
     position:relative;
-    margin: -4.5%;
+    margin: 0.5%;
 
     color: #FF4E42;
     font-family: 'Silkscreen', cursive;
-    /* font-size: 26.5vw; */
-    text-shadow: -10px 10px 0px #ff958e,
-                 -20px 20px 0px #ffb8b3,
-                 -30px 30px 0px #ffedec;
-
-    transition: 0.5s cubic-bezier(.64,-0.01,.38,1);
-    /* transform:translateY(-0.3vw),
-            scale(1.1); */
+    text-shadow: -8px 8px 0px #ff958e,
+                 -16px 16px 0px #ffb8b3,
+                 -24px 24px 0px #ffedec;
 }
-/* .container_intro .introText h1 span::after {
-    position:relative;
-    margin: -1%;
-    transition: 0.35s cubic-bezier(.64,-0.01,.38,1);
-    opacity: 0;
-} */
-
-
 
 .container_intro .decorative_text_1 {
     position: absolute;
@@ -230,19 +224,18 @@
     height: fit-content;
     top: -15%;
 
-    /* font-family: 'Roboto Mono', monospace; */
-    font-family: 'Reno Mono', sans-serif;
-    font-size: 2.5vw;
-    font-style: italic;
-    line-height: 0.3;
-    /* color: #ffc024; */
-    opacity: 0.05;
-    fill: none;
-    stroke: #000;
-    stroke-width    : .5px;
-    /* stroke-linejoin : round; */
-
     /* border: 1px solid greenyellow; */
+}
+.container_intro .decorative_text_1 h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 5vw;
+  font-style: italic;
+  line-height: 0.75;
+  /* color: #ffc024; */
+  opacity: 0.1;
+  fill: none;
+  stroke: #000;
+  stroke-width: .5px;
 }
 
 .container_intro .decorative_text_2 {
@@ -250,23 +243,52 @@
     width: fit-content;
     height: fit-content;
     right: 0%;
-    top: -56.5%;
-
-    font-family: 'Roboto Mono', monospace;
-    /* font-family: 'Reno Mono', sans-serif; */
-    font-size: 6.7vw;
-    line-height: 0.6;
-    text-align: end;
-    
+    top: -35.5%;
 
     /* border: 1px solid greenyellow; */
 }
 
 .container_intro .decorative_text_2 h2 {
-    color: white;
-    opacity: 0.15;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.7vw;
+  line-height: 1.2;
+  text-align: end;
+  color: white;
+  opacity: 0.15;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+
+/* Adjust narrow screen */
+@media only screen and (max-width: 992px) {
+  .container_intro .introText h1 {
+    font-size: 12vw !important;
+    text-shadow: -5px 5px 0px #fff9e9,
+                 -10px 10px 0px #ffe092,
+                 -15px 15px 0px #ffd366;
+  }
+  .container_intro .introText h1 span:hover {
+    color: #FF4E42;
+    font-family: 'Silkscreen', cursive;
+    text-shadow: -4px 4px 0px #ff958e,
+                 -8px 8px 0px #ffb8b3,
+                 -12px 12px 0px #ffedec;
+  }
+}
+/* Adjust narrowER!! screen */
+@media only screen and (max-width: 500px) {
+  .container_intro .introText h1 {
+    font-size: 15vw !important;
+    text-shadow: -4px 4px 0px #fff9e9,
+                 -8px 8px 0px #ffe092,
+                 -12px 12px 0px #ffd366;
+  }
+  .container_intro .introText h1 span:hover {
+    color: #FF4E42;
+    font-family: 'Silkscreen', cursive;
+    text-shadow: -3px 3px 0px #ff958e,
+                 -6px 6px 0px #ffb8b3,
+                 -9px 9px 0px #ffedec;
+  }
 }
   /* -------------------------------------------------------------------------------------------------------------- */
 
