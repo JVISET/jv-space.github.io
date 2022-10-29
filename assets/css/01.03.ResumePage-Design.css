@@ -341,12 +341,10 @@
 
     /* border: 1px solid red; */
   }
+
   /* The actual timeline (the vertical ruler) */
 .main-timeline {
   position: relative;
-  /* overflow: hidden; */
-
-  /* border: 1px solid red; */
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -385,18 +383,48 @@
   border-radius: 50%;
 }
 
+.timeline h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.timeline h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.timeline h5 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
 /* Place the container to the left */
 .left {
   padding: 0px 40px 20px 0px;
   left: 0;
 
-  /* border: #1820EF 1px solid; */
+  transition: transform 0.5s cubic-bezier(.64,-0.01,.38,1);
 }
 
 /* Place the container to the right */
 .right {
   padding: 0px 0px 20px 40px;
   left: 50%;
+}
+
+.left h5 {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 50px;
+  background: #1820EF;
+  color: white;
+}
+.right h5 {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 50px;
+  background: #FF4E42;
+  color: white;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -414,11 +442,23 @@
 .right .card {
   border: #000 2px solid; 
   border-radius: 10px;
+  transition: transform 0.5s cubic-bezier(.64,-0.01,.38,1);
 }
 
 .left .card {
   border: #000 2px solid; 
   border-radius: 10px;
+  transition: transform 0.5s cubic-bezier(.64,-0.01,.38,1);
+}
+
+.right .card:hover {
+  box-shadow: #FF4E42 3px 3px;
+  scale: 1.005;
+}
+
+.left .card:hover {
+  box-shadow: #1820EF 3px 3px;
+  scale: 1.005;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -436,6 +476,32 @@
 /* Fix the circle for containers on the right side */
 .right::after {
   left: -12px;
+}
+
+@media screen and (max-width: 1400px) {
+  .main-timeline::after {
+    top: -12%;
+  }
+}
+@media screen and (max-width: 1009px) {
+  .main-timeline::after {
+    top: -12%;
+  }
+}
+@media screen and (max-width: 727px) {
+  .main-timeline::after {
+    top: -11.5%;
+  }
+}
+@media screen and (max-width: 612px) {
+  .main-timeline::after {
+    top: -12%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-timeline::after {
+    top: -12%;
+  }
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -460,6 +526,17 @@
     border-color: transparent white transparent transparent;
   }
 
+  .left::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent !important;
+  }
+
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
@@ -478,149 +555,422 @@
 
   /* -------------------------------------------------------------------------------------------------------------- */
 
-/* .pageProject {
-    position: relative;
-    height: 100vh;
-
-    margin: 2.5% 0;
-    padding: 6%;
-
-    background: gray;
-    border: 1px solid red;
-} */
-
-  /* -------------------------------------------------------------------------------------------------------------- */
-
   .pageSkill {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
 
     margin: 2.5% 0;
     padding: 5% 6%;
 
-    /* background-color: #282927; */
+    font-family: 'IBM Plex Mono', monospace;
 
-    /* font-family: 'Roboto Mono', monospace; */
-    font-family: 'Reno Mono', sans-serif;
-    letter-spacing: -0.45%;
-
-    /* background: gray; */
     /* border: 1px solid red; */
   }
 
-  .pageSkill > h2 {
-    position: absolute;
-    top: 4%;
-    right: 7%;
-
+  .pageSkill h2 {
+    position: relative;
     padding: 0%;
-    margin: 0%;
+    margin: 0% 0 1% 0;
 
     opacity: 1;
     font-size: 10vw;
     font-family: 'Silkscreen', cursive;
     font-weight: 400;
-    /* text-shadow: -25px 25px 0px #ffc02480; */
     color: black;
     opacity: 0.85;
-    text-shadow: 5px 5px 0 #1820EF,  10px 10px 0px #ffc024, 15px 15px 0 #FF4E42;
+    text-shadow: 0.5vw 0.5vw 0 #1820EF,  0.75vw 0.75vw 0px #ffc024, 1vw 1vw 0 #FF4E42;
     animation: shadowBlink 0.5s ease-in-out infinite;
-    /* text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; */
+
     /* border: 1px solid blue; */
   }
 
   @keyframes shadowBlink {
     0% {
-      text-shadow: 5px 5px 0 #1820EF95,  10px 10px 0px #ffc02490, 15px 15px 0 #FF4E4250;
+      text-shadow: 0.5vw 0.5vw 0 #1820EF95,  0.75vw 0.75vw 0px #ffc02490, 1vw 1vw 0 #FF4E4250;
     }
     33% {
-      text-shadow: 5px 5px 0 #ffc02495,  10px 10px 0px #FF4E4290, 15px 15px 0 #1820EF50;
+      text-shadow: 0.5vw 0.5vw 0 #ffc02495,  0.75vw 0.75vw 0px #FF4E4290, 1vw 1vw 0 #1820EF50;
     }
     67% {
-      text-shadow: 5px 5px 0 #FF4E4295,  10px 10px 0px #1820EF90, 15px 15px 0 #ffc02450;
+      text-shadow: 0.5vw 0.5vw 0 #FF4E4295,  0.75vw 0.75vw 0px #1820EF90, 1vw 1vw 0 #ffc02450;
     }
     100% {
-      text-shadow: 5px 5px 0 #1820EF95,  10px 10px 0px #ffc02490, 15px 15px 0 #FF4E4250;
+      text-shadow: 0.5vw 0.5vw 0 #1820EF95,  0.75vw 0.75vw 0px #ffc02490, 1vw 1vw 0 #FF4E4250;
     }
   }
 
-  .container_skill {
+  .pageSkill .container_fluid {
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    /* grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
-    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
 
     /* border: 1px solid green; */
   }
 
-  .container_skill > * {
+  .pageSkill .row0_column1 {
+    padding: 0% 2% 0 0;
+  }
+
+  .pageSkill .container-fluid .row0_column2,
+  .pageSkill .container-fluid .row0_column1_row2_column1,
+  .pageSkill .container-fluid .row0_column1_row2_column2,
+  .pageSkill .container-fluid .row0_column1_row3 {
+    position: relative;
+    left: 0%;
+
     background: white;
-    /* background: gray; */
     box-shadow: #1820EF 5px 5px;
     border: #000 solid 3px;
-    border-radius: 1.5vw;
+    border-radius: 20px;
     overflow: hidden;
 
     background-color: #ffffff;
     opacity: 1;
-    background-image: radial-gradient(#ababab 0.6000000000000001px, #ffffff 0.6000000000000001px);
+    background-image: radial-gradient(#969696 0.5px, #ffffff 0.5px);
     background-size: 12px 12px;
+
+    transition: transform 0.5s cubic-bezier(.64,-0.01,.38,1);
   }
 
-  .container_skill .skill-software {
-    position: relative;
+  .pageSkill .container-fluid .row0_column1_row2_column1 {
+    margin: 2% 0% 2% 0%;
+    width: 96%;
 
-    width:43%;
-    height: 100%;
-    padding: 0% 4% 0.5% 4%;
-    margin: 1%;
+    left: 2%;
+
+    /* background: rebeccapurple; */
+  }
+
+  .pageSkill .container-fluid .row0_column1_row2_column2 {
+    margin: 2% 0% 4% 0%;
+    width: 100%;
+
+    /* background: red; */
+  }
+
+  .pageSkill .container-fluid .row0_column1_row3 {
+    margin: 2% 0% 2% 0%;
+    width: 100%;
+  }
+
+  .pageSkill .container-fluid .row0_column2 {
+    margin: 2% 0% 1.1% 0%;
+  } 
+
+  .pageSkill .container-fluid .row0_column2:hover,
+  .pageSkill .container-fluid .row0_column1_row2_column1:hover,
+  .pageSkill .container-fluid .row0_column1_row2_column2:hover,
+  .pageSkill .container-fluid .row0_column1_row3:hover {
+    transform: scale(1.01);
+  }
+
+  @media screen and (max-width: 768px) {
+    .pageSkill .container-fluid .row0_column2,
+    .pageSkill .container-fluid .row0_column1_row2_column1,
+    .pageSkill .container-fluid .row0_column1_row2_column2,
+    .pageSkill .container-fluid .row0_column1_row3 {
+      border: #000 solid 2px;
+      border-radius: 15px;
+    }
+    .skill-codeLang-head,
+    .skill-language-head,
+    .skill-softskill-head,
+    .skill-software-head {
+      border-bottom: #000 2px solid !important;
+    }
+    .skill-codeLang .skill-codeLang-contents > div,
+    .skill-language .skill-language-contents > div,
+    .skill-softskill .skill-softskill-contents > div {
+      border: #000 solid 1.5px !important;
+      border-radius: 50px;
+    }
+    .pageSkill .skill-software {
+      width: 98%;
+    }
+    .skill-software .skill-software-contents > div > div {
+      padding: 2.5% 0 !important;
+    }
+    .pageSkill .skill-software-head h3 {
+      padding: 2% 1% 2% 3% !important;
+    }
+  }
+
+  /* Programming Language Box ------------------------------------------------------- */
+  .pageSkill .skill-codeLang {
+    position: relative;
+    margin: 3%;
+    /* width: 45%; */
+
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.5%;
 
     /* border: 1px solid purple; */
   }
-
-  .skill-software .skill-software-head > h3 {
+  .skill-codeLang-head {
     position: relative;
-    left: 10%;
 
-    width: 80%;
+    width: 100%;
     margin: 0%;
-    padding: 1.75% 0%;
 
-    /* color: white; */
+    border-bottom: #000 2.5px solid;
+    background: white;
+
+    /* border: blueviolet solid 1px; */
+  }
+
+  /* .skill-codeLang-head:hover {
+    background: #ffc024;
+  } */
+
+  .skill-codeLang .skill-codeLang-head > h3 {
+    position: relative;
+    left: 0%;
+
+    width: 100%;
+    margin: 0%;
+    padding: 1.5% 1% 1.5% 3%;
+
+    font-size: 20px;
+
+    /* border: lightgreen solid 1px; */
+  }
+  .skill-codeLang-contents {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    margin: 3% 1% 3% 1%;
+  }
+  .skill-codeLang .skill-codeLang-contents > div {
+    width: fit-content;
+    height: fit-content;
+
+    margin:  0.45vw;
+    padding: 1vw 3vw;
+
+    border: #000 solid 2px;
+    border-radius: 12px;
+    background: white;
+
+    /* border: 1px solid yellow; */
+  }
+  .skill-codeLang .skill-codeLang-contents h3 {
+    width: max-content;
+
+    padding: 0%;
+    margin: 0%;
+    font-weight: 400;
+    font-size: 14px;
+
+    /* border: 1px solid yellow; */
+  }
+
+
+  /* Languages Box ------------------------------------------------------- */
+  .pageSkill .skill-language {
+    position: relative;
+    margin: 3%;
+    /* width: 45%; */
+
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.5%;
+
+    /* border: 1px solid purple; */
+  }
+  .skill-language-head {
+    position: relative;
+
+    width: 100%;
+    margin: 0%;
+
+    border-bottom: #000 2.5px solid;
+    background: white;
+
+    /* border: blueviolet solid 1px; */
+  }
+
+  /* .skill-language-head:hover {
+    background: #ffc024;
+  } */
+
+  .skill-language .skill-language-head > h3 {
+    position: relative;
+    left: 0%;
+
+    width: 100%;
+    margin: 0%;
+    padding: 1.5% 1% 1.5% 3%;
+
+    font-size: 20px;
+
+    /* border: lightgreen solid 1px; */
+  }
+  .skill-language-contents {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    margin: 3% 1% 3% 1%;
+  }
+  .skill-language .skill-language-contents > div {
+    width: fit-content;
+    height: fit-content;
+
+    margin:  0.45vw;
+    padding: 1vw 3vw;
+
+    border: #000 solid 2px;
+    border-radius: 12px;
+    background: white;
+
+    /* border: 1px solid yellow; */
+  }
+  .skill-language .skill-language-contents h3 {
+    width: max-content;
+
+    padding: 0%;
+    margin: 0%;
+    font-weight: 400;
+    font-size: 14px;
+
+    /* border: 1px solid yellow; */
+  }
+
+  /* Soft-skills Box ------------------------------------------------------- */
+  .pageSkill .skill-softskill {
+    position: relative;
+    margin: 3%;
+
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.5%;
+
+    /* border: 1px solid purple; */
+  }
+  .skill-softskill-head {
+    position: relative;
+
+    width: 100%;
+    margin: 0%;
+
+    border-bottom: #000 2.5px solid;
+    background: white;
+
+    /* border: blueviolet solid 1px; */
+  }
+
+  /* .skill-softskill-head:hover {
+    background: #ffc024;
+  } */
+  .skill-softskill .skill-softskill-head > h3 {
+    position: relative;
+    left: 0%;
+
+    width: 100%;
+    margin: 0%;
+    padding: 1.5% 1% 1.5% 3%;
+
+    font-size: 20px;
+
+    /* border: lightgreen solid 1px; */
+  }
+  .skill-softskill-contents {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    margin: 3% 1% 3% 1%;
+  }
+  .skill-softskill .skill-softskill-contents > div {
+    width: fit-content;
+    height: fit-content;
+
+    margin:  0.45vw;
+    padding: 1vw 3vw;
+
+    border: #000 solid 2px;
+    border-radius: 12px;
+    background: white;
+
+    /* border: 1px solid yellow; */
+  }
+  .skill-softskill .skill-softskill-contents h3 {
+    width: max-content;
+
+    padding: 0%;
+    margin: 0%;
+    font-weight: 400;
+    font-size: 14px;
+
+    /* border: 1px solid yellow; */
+  }
+
+  /* Software Box ------------------------------------------------------- */
+  .pageSkill .skill-software {
+    position: relative;
+    margin: 3%;
+
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.5%;
+
+    /* border: 1px solid purple;  */
+  }
+
+  .pageSkill .skill-software-head h3 {
+    position: relative;
+    left: 0%;
+
+    width: 100%;
+    margin: 0%;
+    padding: 3% 1% 3% 3%;
+
+    font-size: 20px;
 
     /* border: #000 solid 1px; */
   }
 
   .skill-software-head {
     position: relative;
-    left: -12%;
 
     border-bottom: #000 2.5px solid;
-    background: #ffc024;
+    background: white;
 
-    width: 124%;
+    width: 100%;
   }
+  /* .skill-software-head:hover {
+    background: #ffc024;
+  } */
 
   .skill-software-contents {
     position: relative;
 
-    margin-top: 2%;
+    margin: 2% 0%;
   }
 
   .skill-software .skill-software-contents > div {
     margin:  0;
-    padding: 0.6vw 0;
-    display: flex;
-    flex-direction: row;
+    padding: 0% 8%;
 
     /* border: 1px solid yellow; */
+  }
+
+  .skill-software .skill-software-contents > div > div {
+    padding: 5% 0;
+
+    /* border: 1px solid yellow;  */
+  }
+
+  .skill-software-contents h4 {
+    position: relative;
+    width: 100%;
+    margin: 2% 0;
+    padding: 0%;
+
+    font-size: 16px;
+    font-weight: 400;
   }
 
   @keyframes move {
@@ -638,19 +988,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-ps > h3 {
-    position: relative;
+  .skill-software-ps > div {
     width: 50%;
-    margin: 2% 0;
+
+    margin: 0%;
     padding: 0%;
-
-    font-weight: 400;
-
-    /* border: 1px solid brown; */
   }
 
-  .skill-software-ps > div {
+  .skill-software-ps .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -660,11 +1007,10 @@
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
     
-    width: 50%;
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-ps > div > .mySkill {
+  .skill-software-ps .skillBar .mySkill {
     height: 15px;
     width: 70%;
     margin: 0%;
@@ -683,17 +1029,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-ai > h3 {
-    position: relative;
+  .skill-software-ai > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-ai > div {
+  .skill-software-ai .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -702,11 +1047,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-ai > div > .mySkill {
+  .skill-software-ai .skillBar .mySkill {
     height: 15px;
     width: 75%;
 
@@ -723,17 +1068,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-xd > h3 {
-    position: relative;
+  .skill-software-xd > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-xd > div {
+  .skill-software-xd .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -742,11 +1086,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-xd > div > .mySkill {
+  .skill-software-xd .skillBar .mySkill {
     height: 15px;
     width: 90%;
 
@@ -764,17 +1108,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-aero > h3 {
-    position: relative;
+  .skill-software-aero > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-aero > div {
+  .skill-software-aero .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -783,11 +1126,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-aero > div > .mySkill {
+  .skill-software-aero .skillBar .mySkill {
     height: 15px;
     width: 100%;
 
@@ -804,17 +1147,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-sparkAR > h3 {
-    position: relative;
+  .skill-software-sparkAR > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-sparkAR > div {
+  .skill-software-sparkAR .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -823,11 +1165,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-sparkAR > div > .mySkill {
+  .skill-software-sparkAR .skillBar .mySkill {
     height: 15px;
     width: 65%;
 
@@ -844,17 +1186,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-figma > h3 {
-    position: relative;
+  .skill-software-figma > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-figma > div {
+  .skill-software-figma .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -863,11 +1204,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-figma > div > .mySkill {
+  .skill-software-figma .skillBar .mySkill {
     height: 15px;
     width: 90%;
 
@@ -884,17 +1225,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-skp > h3 {
-    position: relative;
+  .skill-software-skp > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-skp > div {
+  .skill-software-skp .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -903,11 +1243,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-skp > div > .mySkill {
+  .skill-software-skp .skillBar .mySkill {
     height: 15px;
     width: 85%;
 
@@ -924,17 +1264,16 @@
     border-bottom: black solid 1.5px;
   }
 
-  .skill-software-rhino > h3 {
-    position: relative;
+  .skill-software-rhino > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-rhino > div {
+  .skill-software-rhino .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -943,11 +1282,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-rhino > div > .mySkill {
+  .skill-software-rhino .skillBar .mySkill {
     height: 15px;
     width: 75%;
 
@@ -960,17 +1299,16 @@
   }
   /* --------------------------------------------- */
   /* Grasshopper */
-  .skill-software-grasshopper > h3 {
-    position: relative;
+  .skill-software-grasshopper > div {
     width: 50%;
-    margin: 2% 0;
-    padding: 0%;
 
-    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .skill-software-grasshopper > div {
+  .skill-software-grasshopper .skillBar  {
     position: relative;
+    width: 100%;
     right: 0%;
     margin: 3.5% 0%;
 
@@ -979,11 +1317,11 @@
     border: #000 2px solid;
     border-radius: 3vw;
     box-shadow: #FF4E42 2px 2px;
-    width: 50%;
+    
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-grasshopper > div > .mySkill {
+  .skill-software-grasshopper .skillBar .mySkill {
     height: 15px;
     width: 50%;
 
@@ -995,225 +1333,6 @@
     animation: move 10s linear infinite;
   }
   /* --------------------------------------------- */
-
-  .container_skill .skill-codeLang {
-    position: relative;
-    top: 18%;
-    /* left: 2%; */
-
-    width: 25%;
-    height: 47%;
-    padding: 0% 1.75% 1% 1.75%;
-    margin: 1%;
-
-    font-family: 'Reno Mono', sans-serif;
-    letter-spacing: -0.5%;
-
-    /* border: 1px solid purple; */
-  }
-  .skill-codeLang-head {
-    position: relative;
-    left: -10%;
-
-    width: 120%;
-    margin: 0%;
-    padding: 0% 0 0% 13%;
-
-    border-bottom: #000 2.5px solid;
-    background: #ffc024;
-
-    /* border: blueviolet solid 1px; */
-  }
-  .skill-codeLang .skill-codeLang-head > h3 {
-    position: relative;
-    left: 0%;
-
-    width: 90%;
-    margin: 0%;
-    padding: 3% 0%;
-
-    /* border: lightgreen solid 1px; */
-  }
-  .skill-codeLang-contents {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-
-    margin-top: 7%;
-  }
-  .skill-codeLang .skill-codeLang-contents > div {
-    width: fit-content;
-    height: fit-content;
-
-    margin:  0.3vw;
-    padding: 1vw 3vw;
-
-    border: #000 solid 2px;
-    border-radius: 1vw;
-    background: white;
-
-    /* border: 1px solid yellow; */
-  }
-  .skill-codeLang .skill-codeLang-contents h3 {
-    width: max-content;
-
-    padding: 0%;
-    margin: 0%;
-    font-weight: 400;
-    font-size: 1vw;
-
-    /* border: 1px solid yellow; */
-  }
-
-
-  .container_skill .skill-language {
-    position: relative;
-    /* top: 5%; */
-    /* left: 2%; */
-
-    width: 25%;
-    height: 27%;
-    padding: 0% 2% 1% 2%;
-    margin: 1%;
-
-    /* border: 1px solid purple; */
-  }
-  .skill-language > * {
-    padding: 0%;
-    /* border: 1px solid yellow; */
-  }
-  .skill-language-head {
-    position: relative;
-    left: -10%;
-
-    width: 120%;
-    margin: 0%;
-    padding: 0% 0 0% 13%;
-
-    border-bottom: #000 2.5px solid;
-    background: #ffc024;
-
-    /* border: blueviolet solid 1px; */
-  }
-  .skill-language .skill-language-head > h3 {
-    position: relative;
-    left: 0%;
-
-    width: 90%;
-    margin: 0%;
-    padding: 3% 0%;
-
-    /* border: lightgreen solid 1px; */
-  }
-  .skill-language-contents {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-
-    margin-top: 5%;
-  }
-  .skill-language .skill-language-contents > div {
-    width: 100%;
-    height: fit-content;
-
-    margin:  0.3vw;
-    padding: 0.8vw 2vw;
-
-    border: #000 solid 2px;
-    border-radius: 1vw;
-    background: white;
-
-    /* border: 1px solid yellow; */
-  }
-  .skill-language .skill-language-contents h3 {
-    width: max-content;
-
-    padding: 0%;
-    margin: 0%;
-    font-weight: 400;
-    font-size: 1vw;
-
-    /* border: 1px solid yellow; */
-  }
-
-
-  .container_skill .skill-softskill {
-    position: relative;
-    top: 18%;
-
-    width: 25%;
-    height: 78.5%;
-    padding: 0% 2% 1% 2%;
-    margin: 1%;
-
-    /* border: 1px solid purple; */
-  }
-
-  .skill-softskill > * {
-    margin:  0;
-    
-    /* border: 1px solid yellow; */
-  }
-
-  .skill-softskill-head {
-    position: relative;
-    left: -10%;
-
-    width: 120%;
-    margin: 0%;
-    padding: 0% 0 0% 13%;
-
-    border-bottom: #000 2.5px solid;
-    background: #ffc024;
-
-    /* border: blueviolet solid 1px; */
-  }
-
-  .skill-softskill .skill-softskill-head > h3 {
-    position: relative;
-    left: 0%;
-
-    width: 90%;
-    margin: 0%;
-    padding: 3% 0%;
-
-    /* border: lightgreen solid 1px; */
-  }
-
-  .skill-softskill-contents {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-
-    margin-top: 7%;
-  }
-
-  .skill-softskill .skill-softskill-contents > div {
-    width: fit-content;
-    height: fit-content;
-
-    margin:  0.3vw;
-    padding: 1vw 1vw;
-
-    border: #000 solid 2px;
-    border-radius: 1vw;
-    background: white;
-
-    /* border: 1px solid yellow; */
-  }
-
-  .skill-softskill .skill-softskill-contents h3 {
-    width: max-content;
-
-    padding: 0%;
-    margin: 0%;
-    font-weight: 400;
-    font-size: 1vw;
-
-    /* border: 1px solid yellow; */
-  }
 
     /* -------------------------------------------------------------------------------------------------------------- */
 
