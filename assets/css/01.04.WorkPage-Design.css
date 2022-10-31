@@ -561,138 +561,6 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     }
   }
 
-
-
-
-
-  .container_design {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-
-    border-left: #000 solid 5px;
-    border-right: #000 solid 3px;
-
-    display: grid;
-    grid-template-columns: 95% 5%;
-
-    /* border: 1px solid blue; */
-  }
-
-  .container_design .work_NavBar {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content:center;
-
-    padding: 0% 0;
-    border-left: #000 solid 3px;
-    /* border-right: #000 solid 3px; */
-
-    /* border: 1px solid greenyellow; */
-  }
-
-  .container_design a {
-    position: relative;
-    top: 0%;
-    display: inline-flex;
-    width: 100%;
-    height: 16.6666667%;
-    
-    margin: 0% 0;
-    z-index: 5;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-
-    background: white;
-    border: #000 solid 3px;
-    /* border-radius: 0.5vw; */
-
-    /* border: 1px solid green; */
-  }
-  .container_design a:hover {
-    background: #FF4E42;
-    color: white;
-  }
-  .container_design a:active {
-    /* top: 1px; */
-  }
-  .container_design a:focus {
-    background: #1820EF;
-    color: white;
-  }
-
-  /* Don't need button navigation */
-  @supports (scroll-snap-type) {
-    .container_design a {
-      display: none;
-    }
-  }
-  
-  .slides {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    
-    overflow: auto;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-
-    /* border: 1px solid green; */
-  }
-
-  .slides::-webkit-scrollbar {
-    width: 10%;
-    height: 10%;
-  }
-  .slides::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
-  }
-  .slides::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .slides::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-  }
-
-  .slides > div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    /* margin-right: 50px; */
-    /* border-radius: 1.5vw; */
-    background: white;
-    border: 3px solid black;
-    /* box-shadow: 4px 4px #1820EF; */
-    
-    /* Mockup --------------------------------------------- */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10vw;
-
-    transform-origin: center center;
-    transition: transform 0.5s;
-    position: relative;
-    /* transform: scale(1); */
-  }
-  
-  .slides h3 {
-    font-size: 50%;
-  }
-
-  .slides > div:target {
-    /* transform: scale(0.9); */
-  }
-
   /* -------------------------------------------------------------------------------------------------------------- */
 
   .pageExperience {
@@ -702,10 +570,129 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     margin: 3.5% 0 2.5% 0;
     padding: 2% 6%;
     
-    font-family: 'Reno Mono', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    /* transition: 0.5s cubic-bezier(.64,-0.01,.38,1) !important; */
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
+  .pageExperience .container {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+
+    border: 1px solid blue;
+  }
+
+  /* .pageExperience .container .row .container-experience {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+
+    border: 1px solid greenyellow !important;
+  } */
+
+  a:hover,a:focus{
+      text-decoration: none;
+      outline: none;
+  }
+  #accordion .panel{
+      border: none;
+      border-radius: 15px;
+      box-shadow: none;
+      margin-bottom: 10px;
+  }
+  #accordion .panel-heading{
+      padding: 0;
+      border: none;
+      border-radius: 15px 15px 0 0;
+  }
+  #accordion .panel-title a{
+      display: block;
+      padding: 20px 30px;
+      background: black;
+      font-size: 17px;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 3px solid black;
+      border-radius: 15px 15px 0 0;
+      position: relative;
+  }
+  #accordion .panel-title a.collapsed{
+      border-color: black;
+      border-radius: 15px;
+      background-color: white;
+      color: #000;
+      transition: 0.5s cubic-bezier(.64,-0.01,.38,1);
+  }
+  #accordion .panel-title a.collapsed:hover {
+    transform: scale(1.01);
+    box-shadow: #1820EF 5px 5px;
+  }
+  #accordion .panel-title a.collapsed:active {
+    transform: scale(0.99);
+    box-shadow: #FF4E42 2px 2px;
+  }
+
+  #accordion .panel-title a:before,
+  #accordion .panel-title a.collapsed:before,
+  #accordion .panel-title a:after,
+  #accordion .panel-title a.collapsed:after{
+      content: "\f102";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 5px;
+      /* background: black; */
+      font-size: 20px;
+      /* color: #fff; */
+      text-align: center;
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      opacity: 1;
+      transform: scale(1);
+      transition: all 0.3s ease 0s;
+  }
+  #accordion .panel-title a:after,
+  #accordion .panel-title a.collapsed:after{
+      content: "\f103";
+      background: transparent;
+      color: #000;
+      opacity: 0;
+      transform: scale(0);
+  }
+  #accordion .panel-title a.collapsed:before{
+      opacity: 0;
+      transform: scale(0);
+  }
+  #accordion .panel-title a.collapsed:after{
+      opacity: 1;
+      transform: scale(1);
+  }
+  #accordion .panel-body{
+      padding: 20px 30px;
+
+      background-color: #ffffff;
+      opacity: 1;
+      background-size: 16px 16px;
+      background-image:  repeating-linear-gradient(0deg, #ececec, #ececec 0.8px, #ffffff 0.8px, #ffffff);
+
+      /* border-top: none; */
+      border: 2px solid black;
+      font-size: 15px;
+      color: black;
+      line-height: 28px;
+      letter-spacing: 1px;
+      border-radius: 0 0 15px 15px;
+  }
+
+
+
+
 
   .container_work{
     border: #000 solid 5px;
