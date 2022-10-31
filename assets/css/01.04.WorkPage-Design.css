@@ -227,19 +227,6 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       margin: 0% 1% auto 1%;
     }
   }
-
-    .dropdown-submenu {
-      position: relative;
-    }
-    
-    .dropdown-submenu:focus + .dropdown-menu {
-      /* top: 100%; */
-      /* :focus support is incomplete - pressing Tab sets focus to submenu, but that immediately hides submenu */
-      /* display: block; */
-
-
-    }
-  
   /* -------------------------------------------------------------------------------------------------------------- */
 
 .pageIntro {
@@ -286,6 +273,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
   background-image:  linear-gradient(#dedede 1.1px, transparent 1.1px), linear-gradient(to right, #dedede 1.1px, #ffffff 1.1px);
   background-size: 22px 22px;
 
+  /* Exceptional font for intro */
   font-family: 'Reno Mono', sans-serif;
 
   /* border: 1px solid blue; */
@@ -436,23 +424,146 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
   /* -------------------------------------------------------------------------------------------------------------- */
 
-  .pageDesign {
+  .pageDesignWork {
     position: relative;
-    height: 100vh;
+    height: fit-content;
 
-    margin: 2.5% 0 0 0;
-    padding: 0 6%;
+    margin: 3% 0;
+    padding: 2% 6% 1.5% 6%;
 
     border-top: #000 solid 5px;
     border-bottom: #000 solid 5px;
 
     box-sizing: content-box;
 
-    font-family: 'Reno Mono', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
 
-    /* background: gray;
-    border: 1px solid red; */
+    background-color: #ffffff;
+    opacity: 1;
+    background-image:  linear-gradient(#ececec 2px, transparent 2px), linear-gradient(90deg, #ececec 2px, transparent 2px), linear-gradient(#ececec 1px, transparent 1px), linear-gradient(90deg, #ececec 1px, #ffffff 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+    /* border: 1px solid red; */
   }
+
+  .pageDesignWork > div {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .pageDesignWork > div {
+    position: relative;
+    width: 100%;
+
+    /* border: 1px solid blue; */
+  }
+  
+  .pageDesignWork > div > h2 {
+    position: relative;
+
+    margin: 2% 0%;
+
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 48px;
+    font-weight:420;
+    text-align: center;
+    z-index: 3;
+    color: transparent;
+    text-transform:uppercase;
+    letter-spacing: 10px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+
+    transition: 0.5s cubic-bezier(.64,-0.01,.38,1)
+
+    /* border: 1px solid violet; */
+  }
+  .pageDesignWork > div > h2:hover {
+    color: black;
+    text-shadow: 0.5vw 0.5vw 0 #1820EF95,  0.75vw 0.75vw 0px #ffc02490, 1vw 1vw 0 #FF4E4250;
+  }
+
+  .pageDesignWork .container-card {
+    padding: 3% 0%;
+
+    /* border: 1px solid violet; */
+  }
+
+  .pageDesignWork .container-card .card-box {
+    /* background: greenyellow !important;
+    border: 1px solid green !important; */
+  }
+
+  .pageDesignWork .container-card .card-box .card {
+    overflow: hidden;
+    border: #000 3px solid;
+    border-radius: 15px;
+
+    transition: 0.5s cubic-bezier(.64,-0.01,.38,1)
+
+    /* border: 1px solid orange !important; */
+  }
+  .pageDesignWork .container-card .card-box .card:hover {
+    transform: scale(1.012);
+  }
+  .pageDesignWork .container-card .card-box .card img {
+    border-bottom: #000 2.5px solid;
+  }
+  .pageDesignWork .container-card .card-box .card h5 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight:450;
+  }
+  .pageDesignWork .container-card .card-box .card p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight:350;
+  }
+
+  .pageDesignWork .container-card .card-box .card .blockquote p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight:400;
+  }
+  .pageDesignWork .container-card .card-box .card cite {
+    margin: 2% 0 0 0;
+  }
+
+  .pageDesignWork .container-card .card-box .card button {
+    margin: 2% 0 0 0;
+    padding: 2%;
+    width: 100%;
+    color: rgb(37, 37, 37);
+    border-radius: 12px;
+
+    background: white;
+    border: black 1.5px solid !important;
+    transition: 0.15s cubic-bezier(.64,-0.01,.38,1)
+  }
+  .pageDesignWork .container-card .card-box .card button:hover {
+    color: white !important;
+    background: rgb(37, 37, 37);
+    border: rgb(37, 37, 37) 1.5px solid !important;
+    /* box-shadow: #1820EF 3px 3px; */
+  }
+  .pageDesignWork .container-card .card-box .card button:active,
+  .pageDesignWork .container-card .card-box .card button:active {
+    background: black;
+    border: transparent 1px solid;
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+  @media only screen and (max-width: 500px) {
+    .pageDesignWork > div > h2 {
+      font-size: 7vw;
+      -webkit-text-stroke-width: 1px;
+    }
+  }
+
+
+
+
 
   .container_design {
     width: 100%;
@@ -584,7 +695,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
   /* -------------------------------------------------------------------------------------------------------------- */
 
-  .pageWork {
+  .pageExperience {
     position: relative;
     height: 100vh;
 
@@ -593,7 +704,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     
     font-family: 'Reno Mono', sans-serif;
 
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
 
   .container_work{
