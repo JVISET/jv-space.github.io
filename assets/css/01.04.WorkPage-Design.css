@@ -1,58 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Silkscreen:wght@400;700&display=swap');
+
+button:active, button:focus, a:active, a:focus { outline: none; }
+
 .tabSubNav {
     position: relative;
     width: 100%;
-    height: auto;
     
-    padding: 0.25% 0% 0.25% 0;
+    margin: 0% 0 0 0;
+    padding: 0;
     z-index: 2;
     align-items: stretch;
 
-    /* border: 1px solid blue;  */
+    /* border: 1px solid blue; */
+  }
+  .tabSubNav a:hover {
+    text-decoration: none;
+  }
+
+  .tabSubNav a > li > h3 {
+    margin: 2% 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    font-weight:400;
+  }
+  
+  .tabSubNav a >li > h3:hover {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    font-weight:400;
   }
 
   .container_subNav {
     position: relative;
-    padding: 0;
+    padding: 0.5% 2%;
     margin: 0%;
-    display: flex;
+    width: 100%;
+    height: auto;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 7px 7px;
+    background-image: repeating-linear-gradient(-45deg, #eeeeee 0, #eeeeee 0.7000000000000001px, #ffffff 0, #ffffff 50%);
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
+    /* border: 1px solid violet; */ 
   }
-
-  .subNavBar {
-    position: relative;
-    width:100%;
-    padding: 0.25% 17.15vw 0 17.15vw;
-    margin: 1% 0;
-
-    font-size: 65%;
-    font-weight: 700;
-    font-style: normal;
-    color: #000;
-    text-align: center;
-    vertical-align: middle;
-    align-items: stretch;
-
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 1vw;
-    transition: transform 0.25s cubic-bezier(.64,-0.01,.38,1);
-    list-style-type: none;
-  }
-
-  .subNavBar:hover {
-    box-shadow: 4.5px 4.5px #FF4E42;
-    background-color: transparent;
-    transform: scale(1.025);
+  .navbar-subNav .nav-item:hover {
+    box-shadow: 3px 3px #1820EF;
+    background-color: #ffffff !important;
+    transform: scale(1.01);
     z-index: 1;
+    text-decoration: none;
+    color: white !important;
   }
 
-  .subNavBar:active {
-    box-shadow: 2px 2px #1820EF;
+  /* .navbar-subNav .nav-item h3:hover {
+    color: white;
+  } */
+
+  .navbar-subNav .nav-item:active {
+    box-shadow: 0px 0px #FF4E42;
     position: relative;
-    transform: translate(0.1em);
+    transform: scale(1.025);
   }
 
+  .navbar-nav {
+    position: relative;
+    width: 100%;
+    margin: 0% !important;
+    padding: auto 0% !important;
+    
+    /* border: 1px solid red; */
+  }
+
+  .navbar-subNav {
+    width: 100%;
+    margin: 0.5% 0%;
+    padding: 0%;
+
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+
+    /* border: violet 1px solid; */
+  }
+
+  .navbar-subNav .nav-item > a {
+    width: 100%;
+    height: 100%;
+    margin: 0.5% 0%;
+    /* padding: 0%; */
+  }
+
+  .navbar-subNav .dropdown-menu li {
+    margin: 0% !important;
+    padding: 0% !important;
+    border: none !important;
+    background: none !important;
+  }
+
+  .navbar-subNav .nav-item {
+    width: 100%;
+    margin: 0% 0.5%;
+    padding: 0%;
+    
+    border: #000 solid 2px;
+
+    /* border: green 1px solid; */
+  }
+
+  .navbar-subNav .nav-item h3 {
+    margin: 0%;
+    padding: 2% 0%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    font-weight:500;
+    color: #000;
+  } 
+
+  .navbar-subNav .nav-item .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 1% 2%;
+    border: #000 4px solid !important;
+    border-radius: 20px;
+    box-shadow: #1820EF 5px 5px;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(-45deg, #959595 0, #959595 0.4px, #ffffff 0, #ffffff 50%);
+
+    transition: transform 0.75s cubic-bezier(.64,-0.01,.38,1);
+  }
+  .navbar-subNav .nav-item .dropdown-menu a {
+    margin: 2% 0% !important;
+    padding: 1% 2% !important;
+    overflow: hidden;
+    border: #000 solid 1.5px !important;
+    border-radius: 20px;
+    background: white;
+
+    transition: transform 0.25s cubic-bezier(.64,-0.01,.38,1);
+  }
+  .navbar-subNav .nav-item .dropdown-menu a h4 {
+    margin: 0% !important;
+    padding: 1% 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    font-weight:420;
+    /* color: #000; */
+  }
+  .navbar-subNav .nav-item .dropdown-menu a:hover {
+    background: black;
+    color: white !important;
+   }
+   .navbar-subNav .nav-item .dropdown-menu a:active {
+    /* background: black; */
+    border: transparent 1px solid !important;
+    transform: scale(1.02);
+   }
+
+  /* Adjust narrow screen (<992px)*/
+  @media only screen and (max-width: 992px) {
+    .tabSubNav {
+      margin:3% 0 -3% 0;
+    }
+    .container_subNav {
+      padding: 0.5% 2%;
+      border: #000 2px solid;
+      border-radius: 15px;
+    }
+    .navbar-subNav {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+    }
+    .navbar-subNav > .nav-item {
+      margin: 1% 0% !important;
+      padding: 1% 0;
+
+      background: white;
+    }
+    .navbar-subNav h3 {
+      padding: 0% !important;
+      font-size: 1rem !important;
+      font-weight:300;
+    } 
+    .navbar-subNav .nav-item .dropdown-menu {
+      position: relative;
+      top: 5% !important;
+      left: 0% !important;
+      width: 100%;
+      padding: 1% 2%;
+      border: #000 1.5px solid;
+      border-radius: 20px;
+    }
+  }
+  /* Adjust wide screen (>992px) */
+  @media only screen and (min-width: 992px) {
+    .tabSubNav {
+      width: 100%;
+      margin: 0% 1% -3.35% 1%;
+    }
+    .container_subNav{
+      position: relative;
+      left: -1%;
+      border: none;
+      background: white;
+      margin: 0%;
+      padding: 0%;
+    }
+    .tabSubNav .container_subNav #navbarSupportedContent a {
+      position: relative;
+      width: 100%;
+  
+      /* margin: 0% 0.5% !important;
+      padding: 0% !important; */
+    }
+  }
+  /* Adjust wide screen (>1024px) */
+  @media only screen and (min-width: 1025px) {
+    .tabSubNav {
+      width: 100%;
+      margin: 0% 1% auto 1%;
+    }
+  }
+
+    .dropdown-submenu {
+      position: relative;
+    }
+    
+    .dropdown-submenu:focus + .dropdown-menu {
+      /* top: 100%; */
+      /* :focus support is incomplete - pressing Tab sets focus to submenu, but that immediately hides submenu */
+      /* display: block; */
+
+
+    }
+  
   /* -------------------------------------------------------------------------------------------------------------- */
 
 .pageIntro {
@@ -198,31 +385,31 @@
   }
   30% {
     background-color: var(--yellow);
-    transform: translate(5%, 5.7rem);
+    transform: translate(5%, 105%);
     width: 0.25%;
   }
   40% {
     background-color: var(--yellow);
-    transform: translate(0%, 5.7rem);
+    transform: translate(0%, 105%);
     width: 7%;
   }
   50% {
     background-color: var(--yellow);
-    transform: translate(0%, 5.7rem);
+    transform: translate(0%, 105%);
     width: 0.25%;
   }
   60% {
     background-color: var(--blue);
-    transform: translate(0%, 12rem);
+    transform: translate(0%, 225%);
     width: 0.25%;
   }
   70% {
     background-color: var(--blue);
-    transform: translate(0%, 12rem);
+    transform: translate(0%, 225%);
     width: 60%;
   }
   89% {
-    transform: translate(-5%, 12rem);
+    transform: translate(-5%, 225%);
     background-color: var(--blue);
     z-index: 2;
     width: 0%;
