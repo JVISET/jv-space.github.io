@@ -223,6 +223,14 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       border: #000 1.5px solid;
       border-radius: 20px;
     }
+    .navbar-subNav .nav-item .dropdown-menu > div:nth-child(1) > a {
+      width: 100%;
+      padding: 2% 0 !important;
+    }
+    .navbar-subNav .nav-item .dropdown-menu a h4 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight:400;
+    }
   }
   /* Adjust wide screen (>992px) */
   @media only screen and (min-width: 992px) {
