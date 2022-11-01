@@ -134,12 +134,33 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
     transition: transform 0.75s cubic-bezier(.64,-0.01,.38,1);
   }
+  .navbar-subNav .nav-item .dropdown-menu > div:nth-child(1) > a {
+    margin: 1% 0% !important;
+    padding: 0% !important;
+    border-width: 2px !important;
+    border-radius: 50px;
+
+    /* background: red; */
+  }
+  .navbar-subNav .nav-item .dropdown-menu .subNavBar-nested-box {
+    background: rgba(255, 255, 255, 0.75);
+    margin: 0 0 1% 0;
+    padding: 0% 2%;
+    border: #000 2px solid;
+    border-radius: 20px;
+  }
+  .navbar-subNav .nav-item .dropdown-menu a h3 {
+    margin: 0% !important;
+    text-align: center;
+    font-weight: 800 !important;
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
+  }
   .navbar-subNav .nav-item .dropdown-menu a {
     margin: 2% 0% !important;
     padding: 1% 2% !important;
     overflow: hidden;
     border: #000 solid 1.5px !important;
-    border-radius: 20px;
+    border-radius: 15px;
     background: white;
 
     transition: transform 0.25s cubic-bezier(.64,-0.01,.38,1);
@@ -149,8 +170,13 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     padding: 1% 0;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1rem !important;
-    font-weight:420;
-    /* color: #000; */
+    font-weight:410;
+  }
+  .navbar-subNav .nav-item .dropdown-menu a h3:hover {
+    color: white;
+  }
+  .navbar-subNav .nav-item .dropdown-menu > div:nth-child(1) > a:hover {
+    transform: scale(1.015);
   }
   .navbar-subNav .nav-item .dropdown-menu a:hover {
     background: black;
@@ -565,9 +591,10 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
   .pageExperience {
     position: relative;
-    height: 100vh;
+    height: fit-content;
+    /* min-height: 60vh; */
 
-    margin: 3.5% 0 2.5% 0;
+    margin: 8% 0 8% 0;
     padding: 2% 6%;
     
     font-family: 'IBM Plex Mono', monospace;
@@ -575,22 +602,99 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
     /* border: 1px solid red; */
   }
-  .pageExperience .container {
+  .pageExperience .container-content {
     width: 100%;
+    margin: 0%;
+    padding: 0% 0;
+
+    /* border: 1px solid blueviolet; */
+  }
+  .pageExperience .row {
     margin: 0%;
     padding: 0%;
 
-    border: 1px solid blue;
+    display: flex;
+    align-content: center;
+    align-items:center;
+
+    /* border: 1px solid blue; */
   }
 
-  /* .pageExperience .container .row .container-experience {
+  .pageExperience .container-experience {
+    /* width: 100%; */
+    margin: 0% 5vw 0 0;
+    padding: 0% 0;
+
+    /* border: 1px solid green; */
+  }
+  .pageExperience .container-decoration {
+    position: relative;
+    right: 0% !important;
+    width: fit-content;
+    height: fit-content;
+    margin: 5% auto;
+    padding: 0%;
+
+    /* border: 1px solid greenyellow; */
+  }
+  .pageExperience .container-decoration .deco-img {
+    margin: 0% 0 10% 0;
+    padding: 10%;
+    border: 5px solid #000;
+    background-color: #ffffff;
+    opacity: 1;
+    background-image:  repeating-linear-gradient(45deg, #ececec 25%, transparent 25%, transparent 75%, #ececec 75%, #ececec), repeating-linear-gradient(45deg, #ececec 25%, #ffffff 25%, #ffffff 75%, #ececec 75%, #ececec);
+    background-position: 0 0, 8px 8px;
+    background-size: 16px 16px;
+
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1) !important;
+
+    /* border: 1px solid orange; */
+  }
+  .pageExperience .container-decoration .deco-img:hover {
+    background: white;
+    box-shadow: #1820EF 5px 5px;
+  }
+  .pageExperience .container-decoration .deco-img img {
     width: 100%;
+    max-width: 320px;
     margin: 0%;
     padding: 0%;
 
-    border: 1px solid greenyellow !important;
-  } */
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1) !important;
+  }
+  .pageExperience .container-decoration .deco-img img:hover {
+    transform: scale(0.9) rotate(4deg);
+  }
+  .pageExperience .container-decoration .deco-title {
+    width: 100%;
+    margin: 10% 0 0 0;
+    padding: 0%;
 
+
+    /* border: 1px solid orange; */
+  }
+  .pageExperience .container-decoration .deco-title h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 48px;
+    font-weight:420;
+    text-align: center;
+    z-index: 3;
+    color: transparent;
+    text-transform:uppercase;
+    letter-spacing:10px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+
+    transition: 0.5s cubic-bezier(.64,-0.01,.38,1)
+  }
+  .pageExperience .container-decoration .deco-title h2:hover {
+    color: black;
+    text-shadow: 0.5vw 0.5vw 0 #1820EF95,  0.75vw 0.75vw 0px #ffc02490, 1vw 1vw 0 #FF4E4250;
+  }
+
+
+/* Collapsible Part */
   a:hover,a:focus{
       text-decoration: none;
       outline: none;
@@ -639,7 +743,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
   #accordion .panel-title a.collapsed:before,
   #accordion .panel-title a:after,
   #accordion .panel-title a.collapsed:after{
-      content: "\f102";
+      content: "\f106";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       width: 30px;
@@ -659,7 +763,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
   }
   #accordion .panel-title a:after,
   #accordion .panel-title a.collapsed:after{
-      content: "\f103";
+      content: "\f107";
       background: transparent;
       color: #000;
       opacity: 0;
@@ -690,118 +794,19 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       border-radius: 0 0 15px 15px;
   }
 
-
-
-
-
-  .container_work{
-    border: #000 solid 5px;
-    border-radius: 1.5vw;
-    overflow: hidden;
-
-    height: 98.1%;
-
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-
-    background-color: #ffffff;
-    opacity: 1;
-    background-image:  linear-gradient(#d5d5d5 1.6px, transparent 1.6px), linear-gradient(90deg, #d5d5d5 1.6px, transparent 1.6px), linear-gradient(#d5d5d5 0.8px, transparent 0.8px), linear-gradient(90deg, #d5d5d5 0.8px, #ffffff 0.8px);
-    background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
-    background-position: -1.6px -1.6px, -1.6px -1.6px, -0.8px -0.8px, -0.8px -0.8px;
-    box-shadow: #1820EF 5px 5px;
-
-    /* border: 1px solid orange; */
-  }
-
-  .work_content {
-    position: relative;
-    width: 100%;
-    height: auto;
-
-    margin: 0;
-    padding: 0;
-
-    border-top: 2.5px solid black;
-    border-bottom: 0.75px solid black;
-    z-index: 1;
-
-    /* border: 1px solid orange; */
-  }
-
-  .work_head {
-    background: #ffc024;
-    z-index: 1;
-    overflow: hidden;
-  }
-
-  .work_head > h2 {
-    margin: 2% 0 1.5% 0;
-    padding: 0 2%;
-
-    color: black;
-  }
-
-  .collapsible {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 1.5% 2% 1% 2%;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.2vw;
-    border: 1.5px solid black;
-    font-family: 'Reno Mono', sans-serif;
-
-    /* border: 1px solid blue; */
-  }
-  
-  .actives, .collapsible:hover {
-    background-color: #FF4E42;
-    color: white;
-  }
-
-  .collapsible:hover::after {
-    color: white;
-  }
-  
-  .collapsible:after {
-    content: '\2228';
-    color: black;
-    font-weight: bold;
-    float: right;
-    margin-left: 1%;
-  }
-  
-  .actives:after {
-    content: "\2227";
-  }
-  
-  .content {
-    padding: 0% 4%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-
-    color: black;
-    font-size: 1vw;
-
-    background-color: #ebebeb;
-    opacity: 1;
-    background-size: 16px 16px;
-    background-image:  repeating-linear-gradient(0deg, #ffffff, #ffffff 0.8px, #ebebeb 0.8px, #ebebeb);
-
-    border-bottom: 1.5px solid black;
-
-    /* border: 1px solid green; */
-  }
-
-  .content p {
-    margin: 1% 0;
-    padding: 0.5% 0;
-
-    letter-spacing: -0.9px;
-  }
+  @media only screen and (max-width: 928px) {
+    .pageExperience .container-experience {
+      width: 100%;
+      order: 2;
+    }
+    .pageExperience .container-decoration {
+      align-content: center;
+      order: 1;
+    }
+    .pageExperience .container-decoration .deco-title {
+      width: 100% !important;
+    }
+    .pageExperience .container-decoration .deco-img {
+      width: 100% !important;
+    }
+  }  
