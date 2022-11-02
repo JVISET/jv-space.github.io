@@ -61,9 +61,9 @@ html {
 
     border-bottom: 5px solid black;
     background-color: #ffffff;
-    opacity: 0.8;
-    background-image: radial-gradient(#0a0a0a 0.6000000000000001px, #ffffff 0.6000000000000001px);
-    background-size: 12px 12px;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
 
     /* border: #1820EF solid 1px; */
   }
@@ -98,6 +98,7 @@ html {
     /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between; */
+    margin: 0% !important;
     padding: 0% 5% !important;
     background: white !important;
     z-index: 5;
@@ -121,10 +122,11 @@ html {
     }
   }
   
-  #main_nav {
+  .mainNav {
     position: relative;
     padding: 0% !important;
-    align-items: stretch;
+    /* align-items: stretch; */
+    justify-content: stretch !important;
 
     /* border: 1px solid blue !important; */
   }
@@ -134,33 +136,27 @@ html {
     height: auto;
     margin: 0%;
     padding: 0% !important;
+    justify-content: stretch !important;
 
     /* border: #FF4E42 1px solid; */
   }
 
-  .nav {
+  .pageNav .mainNav > div > .nav {
     position: relative;
     width: 100%;
     height: auto;
-    left: 0%;
-
-    padding: 0.5% 0;
-    margin: 0% !important;
-    
-
-    /* border: green 1px solid; */
-  }
-
-  .pageNav nav > div > ul {
     color:black !important;
-    padding: 0;
+    padding: 0.5% 0;
     text-align: center;
-    margin:0;
+    margin: 0% !important;
+    /* justify-items: stretch !important; */
     -webkit-transition: max-height 0.4s;
     -ms-transition: max-height 0.4s;
     -moz-transition: max-height 0.4s;
     -o-transition: max-height 0.4s;
     transition: max-height 0.4s;
+
+    /* border: green 1px solid; */
   }
 
   .pageNav nav ul li {
@@ -168,30 +164,35 @@ html {
     width: 100%;
     
     padding: 1vw 4.7233vw 1vw 4.7233vw;
-    margin: 2% 0%;
+    margin: 2% auto;
     
     text-align: center;
     vertical-align: middle;
     display:inline-block;
 
-    background-color: transparent;
+    background-color: white;
     border: 2px solid black;
     border-radius: 15px;
-    transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
+    transition: 0.5s cubic-bezier(.64,-0.01,.38,1);
     list-style-type: none;
   }
 
   .NavBar:hover {
-    box-shadow: 5px 5px #1820EF;
-    background-color: #ffc024;
-    transform: scale(1.05);
+    color: white;
+    /* box-shadow: 5px 5px #1820EF; */
+    border: transparent 0px solid;
+    background-color: black;
+    transform: scale(1.06);
     z-index: 1;
   }
 
   .NavBar:active {
-    box-shadow: 2px 2px #1820EF;
+    /* box-shadow: 2px 2px #1820EF; */
+    color: white;
+    background-color: #FF4E42;
+    border: 1px solid #FF4E42;
     position: relative;
-    transform: translate(0.1em);
+    transform: scale(0.98);
   }
 
   .nav-link {
@@ -316,7 +317,7 @@ html {
     width: 100%;
     height: 100%;
 
-    margin: 2.5% 0 0 0 !important;
+    margin: 0% 0 0 0 !important;
     padding: 0% 0% !important;
     
     display: block;

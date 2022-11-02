@@ -1,0 +1,256 @@
+.pageIntro {
+    position: relative;
+    top: 0%;
+    margin: 0% !important;
+    padding: 0% !important;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
+
+    /* background: transparent !important; */
+
+    /* border: 1px solid red; */
+}
+.pageIntro .container-intro {
+    margin: 0%;
+    padding: 0% 6%;
+
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    
+    /* border: 1px solid blue; */
+}
+.pageIntro .container-intro > .row {
+    width: 100%;
+    height: fit-content;
+    margin: 0%;
+    padding: 0%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+
+    background: white;
+
+    /* border: 1px solid blueviolet;  */
+}
+.pageIntro .container-img {
+    height: 100%;
+    margin: 0% !important;
+    padding: 0%;
+    border-right: 3px solid black;
+
+    /* border: 1px solid green;  */
+}
+.pageIntro .container-img img {
+    width: 100%;
+
+    /* border: 1px solid orange;  */
+}
+.pageIntro .container-text {
+    /* width: auto; */
+    height: 100% !important;
+    margin: 0% !important;
+
+    /* border: 1px solid green;  */
+}
+.pageIntro .container-text .text-title {
+    margin: 0%;
+    padding: 8% 10%;
+    border-bottom: 1.5px solid black;
+
+    /* border: 1px solid orange;  */
+}
+.pageIntro .container-text .text-title h1 {
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 70px;
+    font-weight: 700;
+    color: black !important;
+}
+.pageIntro .container-text .text-paragraph {
+    margin: 0%;
+    padding: 10% 10% 3% 10%;
+    border-top: 1.5px solid black;
+
+    /* border: 1px solid orange;  */
+}
+.pageIntro .container-text .text-paragraph p {
+    text-align: justify;
+}
+
+
+/* Start pageRole, pageResponsibility ---------------------------------------- */
+.pageRole,
+.pageResponsibility {
+    position: relative;
+
+    margin: 0%;
+    padding: 0% 6%;
+
+    border-bottom: 5px solid black;
+
+    font-family: 'IBM Plex Mono', monospace;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
+
+    /* border: 1px solid red; */
+}
+.pageRole .container-role,
+.pageResponsibility .container-response{
+    padding: 0% 0;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+
+    background: white;
+
+    /* border: 1px solid blue; */
+}
+.pageRole .container-role .role-title,
+.pageResponsibility .container-response .rpns-title  {
+    margin: 0%;
+    padding: 5%;
+
+    border-right: 1.5px solid black;
+
+    /* border: 1px solid green; */
+}
+.pageRole .container-role .role-content,
+.pageResponsibility .container-response .rpns-content {
+    margin: 0%;
+    padding: 3% 5%;
+
+    border-left: 1.5px solid black;
+
+    /* border: 1px solid orangered; */
+}
+.pageRole .container-role .role-content .role-list,
+.pageResponsibility .container-response .rpns-content .rpns-list {
+    width: fit-content;
+    margin: 5% auto;
+    padding: auto;
+    /* align-content: center !important; */
+
+
+    /* border: 1px solid greenyellow; */
+}
+.pageRole .container-role .role-content .role-list img,
+.pageResponsibility .container-response .rpns-content .rpns-list img {
+    max-height: 120px;
+    
+    margin: 0 auto 25px auto;
+    padding:  0 20px;
+
+    /* border: 1px solid orange; */
+}
+.pageRole .container-role .role-content .role-caption h5,
+.pageResponsibility .container-response .rpns-content .rpns-caption h5 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+
+    /* border: 1px solid orange; */
+}
+.pageRole .container-role .role-content .role-caption p,
+.pageResponsibility .container-response .rpns-content .rpns-caption p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+
+    /* border: 1px solid orange; */
+}
+
+/* Start pageWhy ---------------------------------------- */
+.pageWhy {
+    position: relative;
+
+    margin: 0%;
+    padding: 0% 6%;
+
+    border-bottom: 5px solid black;
+
+    font-family: 'IBM Plex Mono', monospace;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-image: radial-gradient(#8f8f8f 0.55px, #ffffff 0.55px);
+    background-size: 11px 11px;
+
+    /* border: 1px solid red; */
+}
+.pageWhy .container-why > .row {
+    margin: 0%;
+    padding: 0%;
+
+    /* border: 1px solid green;  */
+}
+.pageWhy .banner-img,
+.pageWhy .banner-content {
+    margin: 0%;
+    padding: 5%;
+
+    /* border: 1px solid greenyellow; */
+}
+.pageWhy .banner-img img {
+    max-width: 300px;
+    width: 100%;
+    margin: 0%;
+    padding: 5%;
+
+    /* border: 1px solid orange; */
+}
+
+/* Start pageAttitude ---------------------------------------- */ 
+.pageAttitude {
+    position: relative;
+
+    margin: 0%;
+    padding: 0% 6%;
+
+    /* border-bottom: 5px solid black; */
+
+    font-family: 'IBM Plex Mono', monospace;
+
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
+    /* border: 1px solid red; */
+}
+.pageAttitude .container-attitude {
+    padding: 3% 5%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+
+    background: white;
+
+    /* border: 1px solid blue; */
+}
+.pageAttitude .container-attitude > .row {
+    margin: 0%;
+    padding: 0% !important;
+    /* border: 1px solid green; */
+}
+.pageAttitude .container-attitude .objective-att {
+    /* padding: 15% auto !important; */
+    /* border: 1px solid greenyellow; */
+}
+.pageAttitude .container-attitude .objective-att .objective-icon {
+    /* padding: 2%; */
+    margin: 6% auto 13% auto !important;
+    border: #000000 0px solid;
+
+    /* border: 1px solid orange; */
+}
+.pageAttitude .container-attitude .objective-att h2 {
+    margin-bottom: 4.5%;
+    font-size: 24px;
+    font-weight: 400;
+}
+.pageAttitude .container-attitude .objective-att p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 6%;
+}

@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: fit-content;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     margin: -1.4% 0 0 0;
     padding: 5% 6%;
 
@@ -43,6 +43,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 5vw !important;
     font-weight:800;
+    letter-spacing: 4px;
     /* text-align: end; */
   }
   .mondrian_item:nth-child(15) h4 span {
@@ -114,11 +115,11 @@
     font-size: 18px;
     border: 2px solid black;
     border-radius: 10px;
-	padding:5px 15px;
+	  padding:5px 15px;
     text-align: center;
     color: black;
     margin-bottom: 30px;
-	background:transparent;
+	  background:white;
     transition: 0.5s cubic-bezier(.64,-0.01,.38,1);
 }
 .pageGallery .filter-button:hover,
@@ -208,6 +209,7 @@
   .mondrian__item:nth-child(14), 
   .mondrian__item:nth-child(18), 
   .mondrian__item:nth-child(23),
+  .mondrian__item:nth-child(25),
   .mondrian__item:nth-child(30){
     background-color: white;
     grid-row: span 2;
@@ -223,8 +225,7 @@
     grid-row: span 3;
     grid-column: span 3;
   }
-  .mondrian__item:nth-child(6),
-  .mondrian__item:nth-child(25) {
+  .mondrian__item:nth-child(6) {
     background-color: white;
     grid-row: span 4;
     grid-column: span 4;
