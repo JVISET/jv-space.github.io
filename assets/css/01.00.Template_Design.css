@@ -60,6 +60,7 @@ html {
     justify-content: space-between;
 
     border-bottom: 5px solid black;
+    
     background-color: #ffffff;
     opacity: 1;
     background-size: 4px 4px;
@@ -173,16 +174,14 @@ html {
     background-color: white;
     border: 2px solid black;
     border-radius: 15px;
-    transition: 0.5s cubic-bezier(.64,-0.01,.38,1);
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
     list-style-type: none;
   }
 
   .NavBar:hover {
     color: white;
-    /* box-shadow: 5px 5px #1820EF; */
-    border: transparent 0px solid;
     background-color: black;
-    transform: scale(1.06);
+    transform: scale(1.05);
     z-index: 1;
   }
 
@@ -190,7 +189,7 @@ html {
     /* box-shadow: 2px 2px #1820EF; */
     color: white;
     background-color: #FF4E42;
-    border: 1px solid #FF4E42;
+    border: 2px solid #FF4E42;
     position: relative;
     transform: scale(0.98);
   }
@@ -217,7 +216,7 @@ html {
     margin: 0.1vw 0 0 0;
     padding: 0%;
     font-size: 1.25rem !important;
-    font-weight: 600 !important;
+    font-weight: 450 !important;
     font-style: normal;
     font-family: 'IBM Plex Mono', monospace;
 
@@ -327,9 +326,10 @@ html {
     line-height: 0.9;
 
     border-top: #000 5px solid;
+
     background-color: #ffffff;
     opacity: 0.8;
-    background-image: radial-gradient(#0a0a0a 0.6000000000000001px, #ffffff 0.6000000000000001px);
+    background-image: radial-gradient(#0a0a0a 0.5px, #ffffff 0.5px);
     background-size: 12px 12px;
 
     /* border: orange 1px solid; */
