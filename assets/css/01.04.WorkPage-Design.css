@@ -7,7 +7,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     width: 100%;
     
     margin: 0% 0 0 0;
-    padding: 0;
+    padding: 0 !important;
     z-index: 2;
     align-items: stretch;
 
@@ -32,17 +32,17 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
   .container_subNav {
     position: relative;
-    padding: 0.5% 2%;
+    padding: 0% !important;
     margin: 0%;
     width: 100%;
     height: auto;
 
-    background-color: #ffffff;
+    /* background-color: #ffffff;
     opacity: 1;
     background-size: 7px 7px;
-    background-image: repeating-linear-gradient(-45deg, #eeeeee 0, #eeeeee 0.7000000000000001px, #ffffff 0, #ffffff 50%);
+    background-image: repeating-linear-gradient(-45deg, #eeeeee 0, #eeeeee 0.7000000000000001px, #ffffff 0, #ffffff 50%); */
 
-    /* border: 1px solid violet; */ 
+    /* border: 1px solid violet;  */
   }
   .navbar-subNav .nav-item:hover {
     box-shadow: 3px 3px #1820EF;
@@ -99,14 +99,14 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     margin: 0% 0.5%;
     padding: 0%;
     
-    border: #000 solid 2px;
+    border: #000 solid 1.5px;
 
     /* border: green 1px solid; */
   }
 
   .navbar-subNav .nav-item h3 {
     margin: 0%;
-    padding: 2% 0%;
+    padding: 1% 0%;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1rem !important;
     font-weight:500;
@@ -189,7 +189,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     }
     .container_subNav {
       padding: 0.5% 2%;
-      border: #000 2px solid;
+      /* border: #000 3px solid; */
       border-radius: 15px;
     }
     .navbar-subNav {
@@ -225,6 +225,10 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       font-family: 'IBM Plex Mono', monospace;
       font-weight:400;
     }
+    .menu-box {
+      padding-bottom: 4% !important;
+      border-bottom: #000 solid 4px;
+    }
   }
   /* Adjust wide screen (>992px) */
   @media only screen and (min-width: 992px) {
@@ -248,11 +252,20 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       padding: 0% !important; */
     }
   }
+  @media only screen and (max-width: 1024px) {
+    
+  }
+  
   /* Adjust wide screen (>1024px) */
   @media only screen and (min-width: 1025px) {
     .tabSubNav {
       width: 100%;
       margin: 0% 1% auto 1%;
+    }
+    .pageNav .menu-box {
+      margin: 0% !important;
+      padding: 0% !important;
+      border-bottom: transparent solid 5px !important;
     }
   }
   /* -------------------------------------------------------------------------------------------------------------- */

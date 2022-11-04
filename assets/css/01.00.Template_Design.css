@@ -44,7 +44,10 @@ html {
     margin: 0% !important;
     padding: 0% !important;
 
-    background: transparent;
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 4px 4px;
+    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
   }
 
     /* -------------------------------------------------------------------------------------------------------------- */
@@ -101,12 +104,10 @@ html {
     position: relative;
     width: 100%;
     margin: 0% !important;
-    padding: 0% 5% !important;
- 
-    /* background-color: #ffffff;
-    opacity: 1;
-    background-size: 4px 4px;
-    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%); */
+    padding: 0% 5% 1% 5% !important;
+
+    border-bottom: #000000 5px solid;
+
 
     z-index: 5;
 
@@ -158,6 +159,9 @@ html {
   .navbar-header {
     display: none;
   }
+  .pageNav {
+    background: white;
+  }
 }
 /* --------------------------------------------------------------- */
 
@@ -173,6 +177,11 @@ html {
   @media only screen and (max-width: 992px) {
     .pageNav nav ul li {
       border: 1.5px solid black;
+
+      background-color: #ffffff;
+      opacity: 1;
+      background-size: 4px 4px;
+      background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
       /* margin: -50% 0; */
     }
   }
@@ -216,7 +225,7 @@ html {
     vertical-align: middle;
     display:inline-block;
 
-    background-color: white;
+    background: white !important;
     border: 2px solid black;
     border-radius: 15px;
     transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
@@ -225,7 +234,7 @@ html {
 
   .NavBar:hover {
     color: white;
-    background-color: black;
+    background-color: black !important;
     transform: scale(1.05);
     z-index: 1;
   }
