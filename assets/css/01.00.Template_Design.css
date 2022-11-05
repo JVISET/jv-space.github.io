@@ -18,11 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
   body {
     grid-auto-flow: column;
   }
-} 
+}  */
 
 body {
   min-block-size: 100%;
@@ -34,8 +34,8 @@ body {
 }
 
 a {
-  color: black;
-  text-decoration: none;
+  color: black !important;
+  text-decoration: none !important;
   display: inline-block;
   z-index: 1;
 }
@@ -49,7 +49,15 @@ a {
   background-size: 4px 4px;
   background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%); */
 }
+.gap {
+  width: 100%;
+  height: 3vw;
 
+  background-color: #ffffff;
+  opacity: 1;
+  background-size: 4px 4px;
+  background-image: repeating-linear-gradient(-45deg, #fff 0, #fff 0.4px, #000 0, #000 50%);
+}
 /* -------------------------------------------------------------------------------------------------------------- */
 
 /* TOP HEADER */
@@ -153,8 +161,10 @@ a {
   transform: scale(0.92);
 }
 .navbar-header button:focus {
-  background-color: rgba(0, 0, 0, 0.10);
   outline: none;
+}
+.navbar-header button:hover {
+  background-color: rgba(0, 0, 0, 0.10);
 }
 
 /* --------------------------------------------------------------- */
@@ -180,7 +190,6 @@ a {
 @media only screen and (max-width: 992px) {
   .pageNav {
     border-bottom: none;
-    /* border: red solid 2px; */
   }
   .pageNav nav ul li {
     border: 1.5px solid black;
@@ -189,7 +198,6 @@ a {
     opacity: 1;
     background-size: 4px 4px;
     background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
-    /* margin: -50% 0; */
   }
   .mainNav {
     position: fixed;
@@ -207,8 +215,6 @@ a {
   }
   .mainNav .navbar-header {
     padding: 0% 2.5% 2% 2.5%;
-
-    /* border: red 2px solid; */
   }
   .pageNav .mainNav > div > .nav {
     padding: 0% 3% 2.5% 3% !important;
@@ -218,8 +224,6 @@ a {
 .pageNav .mainNav {
   padding: 0% !important;
   justify-content: stretch !important;
-
-  /* border: 1px solid blue !important; */
 }
 
 .pageNav .mainNav > div > .nav {
@@ -329,63 +333,6 @@ a {
   border: 0;
 }
 
-
-
-
-
-
-
-/* .navbar-toggler span {
-  margin: 0%;
-  padding: 0%; */
-
-  /* background: rgb(0, 0, 0) !important; */
-/* } */
-
-/* .toggler-icon {
-  background: rgb(0, 0, 0) !important;
-  opacity: 0.7;
-} */
-
-/* .toggler-icon:active {
-  animation: spin 0.5s ease-in-out 1;
-} */
-/* .middle-bar {
-  margin-top: 0px;
-} */
-
-/* .navbar-toggler .top-bar {
-  position: absolute;
-  left: 49.5%;
-  margin-top: 0px;
-  transform: rotate(45deg);
-} */
-
-/* .navbar-toggler .middle-bar {
-  opacity: 0;
-  filter: alpha(opacity=0);
-} */
-
-/* .navbar-toggler .bottom-bar {
-  position: absolute;
-  left: 46.5%;
-  margin-top: 0px;
-  transform: rotate(-45deg);
-} */
-
-/* .navbar-toggler.collapsed .top-bar{
-  margin-top: 0px;
-  transform: rotate(-45deg);
-} */
-/* .navbar-toggler.collapsed .middle-bar{
-  opacity: 1;
-  filter: alpha(opacity=100);
-} */
-/* .navbar-toggler.collapsed .bottom-bar{
-  margin-top: 0px;
-  transform: rotate(45deg);
-} */
-
 /* -------------------------------------------------------------------------------------------------------------- */
 
 .pageFooter {
@@ -458,6 +405,7 @@ margin: 0.2% 6% 0 0;
 font-size: 12px;
 font-weight: 200;
 line-height: 18px;
+text-align: right !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -483,6 +431,9 @@ line-height: 18px;
   .footer_contact {
     margin-top: 0%;
     border-left: none;
+  }
+  .footer-credit p {
+    text-align: center !important;
   }
 }
 @media only screen and (max-width: 500px) {

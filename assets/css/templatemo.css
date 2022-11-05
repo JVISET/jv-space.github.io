@@ -97,7 +97,7 @@ p, a {font-weight: 400;}
 #index_banner .carousel-indicators.active {
   width: 25px;
   height: 10px;
-  background-color: #ffc024 !important;
+  background-color: #000 !important;
   border: #000 solid 0px;
   border-radius: 4px;
   transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
