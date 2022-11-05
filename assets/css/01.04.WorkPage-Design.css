@@ -226,8 +226,8 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       font-weight:400;
     }
     .menu-box {
-      padding-bottom: 4% !important;
-      border-bottom: #000 solid 4px;
+      /* padding-bottom: 0% !important; */
+      /* border-bottom: #000 solid 4px; */
     }
   }
   /* Adjust wide screen (>992px) */

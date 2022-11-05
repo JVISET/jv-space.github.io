@@ -1,9 +1,6 @@
-.pageNav {
-  border-bottom: 4px solid black;
-}
-
 .pageIntro {
   position: relative;
+  top: 90px;
   width:100%;
   height: fit-content;
   margin-top: 15%;
@@ -30,8 +27,8 @@
   white-space: nowrap;
   border-right: 00.08em solid black;
 
-  /* font-family: 'Silkscreen', cursive;
-  font-weight: 400; */
+  /* font-family: 'Silkscreen', cursive; */
+  font-weight: 700;
   font-size: 12vw;
 
   position: relative;
