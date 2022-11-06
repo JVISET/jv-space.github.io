@@ -154,7 +154,7 @@
 /* Adjust narrow screen (<700px)*/
 @media only screen and (max-width: 700px) {
   .tabSubNav {
-    top: 75px !important;
+    top: 72px;
   }
 }
 /* Adjust narrow screen (<992px)*/
@@ -195,6 +195,11 @@
   }
   .subNavBar {
     margin: 0.75% auto !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .pageNav {
+    border-bottom: none; 
   }
 }
 /* Adjust wide screen (>992px) */
@@ -348,7 +353,36 @@
   opacity: 0.15;
   text-shadow: -1px -1px 0 #26221f, 1px -1px 0 #26221f, -1px 1px 0 #26221f, 1px 1px 0 #26221f; 
 }
-
+@media only screen and (min-width: 1300px) {
+  .pageIntro {
+    height: 500px !important;
+  }
+  .container_intro .decorative_text_1 {
+    top: -30px;
+  }
+  .container_intro .decorative_text_2 {
+    top: -140px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .pageIntro {
+    height: 40vw !important;
+  }
+  .container_intro .decorative_text_1,
+  .container_intro .decorative_text_2 {
+    top: -15.5%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .pageIntro {
+    top: 35px;
+    height: 50vw !important;
+  }
+  .container_intro .decorative_text_1,
+  .container_intro .decorative_text_2 {
+    top: -10.5%;
+  }
+}
 /* Adjust narrow screen */
 @media only screen and (max-width: 992px) {
   .pageIntro {

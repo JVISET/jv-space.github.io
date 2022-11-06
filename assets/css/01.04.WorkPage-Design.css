@@ -44,6 +44,21 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 
     /* border: 1px solid violet;  */
   }
+  .navbar-subNav .nav-item {
+    width: 100%;
+    margin: 0% 0.5%;
+    padding: 0%;
+    
+    border: #26221f solid 1.5px;
+
+    /* border: green 1px solid; */
+  }
+  .navbar-subNav .nav-item > a {
+    width: 100%;
+    height: 100%;
+    margin: 0.5% 0%;
+    /* padding: 0%; */
+  }
   .navbar-subNav .nav-item:hover {
     box-shadow: 3px 3px #151210;
     background-color: #e9e6e4 !important;
@@ -80,28 +95,11 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     /* border: violet 1px solid; */
   }
 
-  .navbar-subNav .nav-item > a {
-    width: 100%;
-    height: 100%;
-    margin: 0.5% 0%;
-    /* padding: 0%; */
-  }
-
   .navbar-subNav .dropdown-menu li {
     margin: 0% !important;
     padding: 0% !important;
     border: none !important;
     background: none !important;
-  }
-
-  .navbar-subNav .nav-item {
-    width: 100%;
-    margin: 0% 0.5%;
-    padding: 0%;
-    
-    border: #26221f solid 1.5px;
-
-    /* border: green 1px solid; */
   }
 
   .navbar-subNav .nav-item h3 {
@@ -129,8 +127,9 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     transition: transform 0.75s cubic-bezier(.64,-0.01,.38,1);
   }
   .navbar-subNav .nav-item .dropdown-menu > div:nth-child(1) > a {
-    margin: 1% 0% !important;
-    padding: 0% !important;
+    width: 100%;
+    margin: 1% auto !important;
+    padding: 0.5% 0 !important;
     border-width: 2px !important;
     border-radius: 50px;
 
@@ -225,10 +224,6 @@ button:active, button:focus, a:active, a:focus { outline: none; }
       font-family: 'IBM Plex Mono', monospace;
       font-weight:400;
     }
-    .menu-box {
-      /* padding-bottom: 0% !important; */
-      /* border-bottom: #000 solid 4px; */
-    }
   }
   /* Adjust wide screen (>992px) */
   @media only screen and (min-width: 992px) {
@@ -250,9 +245,6 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     .tabSubNav .container_subNav #navbarSupportedContent a {
       position: relative;
       width: 100%;
-  
-      /* margin: 0% 0.5% !important;
-      padding: 0% !important; */
     }
   }
   @media only screen and (max-width: 1024px) {
