@@ -207,7 +207,7 @@
     position: relative;
     left: -1%;
     border: none;
-    background: #e9e6e4;
+    background: transparent;
     margin: 0%;
     padding: 0%;
   }
@@ -218,11 +218,6 @@
     margin: 0% 0.5% !important;
     padding: 0% !important;
   }
-  /* .tabSubNav .container_subNav li > a {
-    margin: 0% 5% !important;
-    padding: 1% 0% !important;
-
-  } */
 }
 /* Adjust wide screen (>1024px) */
 @media only screen and (min-width: 1025px) {
@@ -823,10 +818,6 @@
     /* border: blueviolet solid 1px; */
   }
 
-  /* .skill-codeLang-head:hover {
-    background: #ffc024;
-  } */
-
   .skill-codeLang .skill-codeLang-head > h3 {
     position: relative;
     left: 0%;
@@ -1045,9 +1036,6 @@
 
     width: 100%;
   }
-  /* .skill-software-head:hover {
-    background: #ffc024;
-  } */
 
   .skill-software-contents {
     position: relative;
