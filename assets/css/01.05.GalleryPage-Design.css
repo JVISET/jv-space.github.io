@@ -118,9 +118,14 @@
     background-image: repeating-linear-gradient(-45deg, #26221f 0, #26221f 1px, #ffffff 0, #ffffff 30%);
     grid-column: span 3;
   }
+
   @media only screen and (max-width: 992px) {
+    .pageIntro {
+      position: relative;
+      top: 64px;
+    }
     .pageIntro .mondrian_item:nth-child(6) h4 span {
-      font-size: 6vw !important;
+      font-size: 7vw !important;
       font-weight:750;
       letter-spacing: 4px;
     }
@@ -146,6 +151,10 @@
   }
 
   @media only screen and (max-width: 767px) {
+    .pageIntro {
+      position: relative;
+      top: 62px;
+    }
     .pageIntro .mondrian-box {
       gap: 3px;
       grid-template-columns: repeat(auto-fit,minmax(75px,1fr));
@@ -157,7 +166,7 @@
       letter-spacing: 4px;
     }
     .pageIntro .mondrian_item:nth-child(11) h4 span {
-      font-size: 4.5vw !important;
+      font-size: 3vw !important;
       font-weight:300;
     }
     .pageIntro .mondrian_item:nth-child(17) h4 span {
@@ -169,6 +178,11 @@
     .pageIntro .mondrian_item:nth-child(19),
     .pageIntro .mondrian_item:nth-child(20) {
       visibility: hidden !important;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .pageIntro .mondrian_item:nth-child(11) h4 span {
+      font-size: 5vw !important;
     }
   }
   @media only screen and (max-width: 500px) {
@@ -187,16 +201,26 @@
       grid-template-columns: repeat(auto-fit,minmax(50px,100px));
       /* display: none; */
     }
+    .pageIntro .mondrian_item:nth-child(6) h4 span {
+      font-size: 15vw !important;
+    }
+    .pageIntro .mondrian_item:nth-child(11) h4 span {
+      font-size: 5vw !important;
+    }
+    .pageIntro .mondrian_item:nth-child(17) h4 span {
+      font-size: 6vw !important;
+    }
   }
 
 /* Start Gallery Section ----------------------------------------------------------- */
 .pageGallery {
-    position: relative;
+    position: relative !important;
+    top: auto;
     width: 100%;
     height: fit-content;
     min-height: 100vh;
 
-    margin: 0 0 2.5% 0;
+    margin: 0% 0 2.5% 0;
     padding: 5% 6% 5% 6%;
 
     font-family: 'IBM Plex Mono', monospace;
@@ -370,8 +394,20 @@
     grid-row: span 2;
     grid-column: span 2;
   } */
-
+  @media only screen and (max-width: 992px) {
+    .pageGallery {
+      margin-top: 7%;
+      padding-top: 40px;
+      /* top: 64px; */
+    }
+  }
   @media only screen and (max-width: 767px) {
+    .pageGallery {
+      margin-top: 8.5%;
+      padding-top: 50px;
+      /* top: 62px; */
+    }
+
     .mondrian__item:nth-child(1),
     .mondrian__item:nth-child(2),
     .mondrian__item:nth-child(3),
@@ -406,6 +442,11 @@
   }
 
   @media only screen and (max-width: 500px) {
+    .pageGallery {
+      margin-top: 13.5%;
+      padding-top: 50px;
+      /* top: 62px; */
+    }
     .pageGallery .gallery-title{
         margin-bottom: 10%;
     }
