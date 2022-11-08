@@ -7,10 +7,10 @@
     margin: 0% !important;
     padding: 0% !important;
 
-    background-color: #ffffff;
+    background-color: #e9e6e4;
     opacity: 1;
     background-size: 4px 4px;
-    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
+    background-image: repeating-linear-gradient(-45deg, #26221f 0, #26221f 0.4px, #e9e6e4 0, #e9e6e4 50%);
 
     /* background: transparent !important; */
 
@@ -21,7 +21,7 @@
     padding: 0% 6%;
 
     /* border-top: 5px solid black; */
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #26221f;
     
     /* border: 1px solid blue; */
 }
@@ -30,10 +30,10 @@
     height: fit-content;
     margin: 0%;
     padding: 0%;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-left: 3px solid #26221f;
+    border-right: 3px solid #26221f;
 
-    background: white;
+    background: #e9e6e4;
 
     /* border: 1px solid blueviolet;  */
 }
@@ -41,7 +41,7 @@
     height: 100%;
     margin: 0% !important;
     padding: 0%;
-    border-right: 3px solid black;
+    border-right: 3px solid #26221f;
 
     /* border: 1px solid green;  */
 }
@@ -64,7 +64,7 @@
 .pageIntro .container-text .text-title {
     margin: 0%;
     padding: 8% 10%;
-    border-bottom: 1.5px solid black;
+    border-bottom: 1.5px solid #26221f;
 
     /* border: 1px solid orange;  */
 }
@@ -73,12 +73,12 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 70px;
     font-weight: 700;
-    color: black !important;
+    color: #26221f !important;
 }
 .pageIntro .container-text .text-paragraph {
     margin: 0%;
     padding: 10% 10% 3% 10%;
-    border-top: 1.5px solid black;
+    border-top: 1.5px solid #26221f;
 
     /* border: 1px solid orange;  */
 }
@@ -90,18 +90,23 @@
 }
   /* Adjust narrow screen (<992px)*/
   @media only screen and (max-width: 992px) {
+    .pageIntro {
+        position: relative;
+        top: 64px;
+        border-top: 1px solid ;
+      }
     .pageIntro .container-img {
-        border-right:0px solid black;
-        border-bottom: 3px solid black;
+        border-right:0px solid #26221f;
+        border-bottom: 3px solid #26221f;
 
-        background-color: #ffffff;
+        background-color: #e9e6e4;
         opacity: 1;
         background-size: 4px 4px;
-        background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 1px, #ffffff 0, #ffffff 45%);
+        background-image: repeating-linear-gradient(-45deg, #26221f 0, #26221f 1px, #e9e6e4 0, #e9e6e4 45%);
     }
     .pageIntro .container-img img {
         max-width: 400px;
-        border-right:3px solid black;
+        border-right:3px solid #26221f;
     }
     .pageIntro .container-text .text-title {
         padding: 3.5% 8%;
@@ -114,11 +119,17 @@
         padding: 3.5% 8%;
     }
   }
+  /* Adjust narrow screen (<700px)*/
+  @media only screen and (max-width: 700px) {
+    .pageIntro {
+        top: 62px;
+      }
+    }
     /* Adjust narrow screen (<470px)*/
     @media only screen and (max-width: 470px) {
         .pageIntro .container-img img {
             max-width: 400px;
-            border-right:0px solid black;
+            border-right:0px solid #26221f;
         }
     }
 
@@ -130,24 +141,24 @@
     margin: 0%;
     padding: 0% 6%;
 
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #26221f;
 
     font-family: 'IBM Plex Mono', monospace;
 
-    background-color: #ffffff;
+    background-color: #e9e6e4;
     opacity: 1;
     background-size: 4px 4px;
-    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
+    background-image: repeating-linear-gradient(-45deg, #26221f 0, #26221f 0.4px, #e9e6e4 0, #e9e6e4 50%);
 
     /* border: 1px solid red; */
 }
 .pageRole .container-role,
 .pageResponsibility .container-response{
     padding: 0% 0;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-left: 3px solid #26221f;
+    border-right: 3px solid #26221f;
 
-    background: white;
+    background: #e9e6e4;
 
     /* border: 1px solid blue; */
 }
@@ -156,7 +167,7 @@
     margin: 0%;
     padding: 5%;
 
-    border-right: 1.5px solid black;
+    border-right: 1.5px solid #26221f;
 
     /* border: 1px solid green; */
 }
@@ -165,7 +176,7 @@
     margin: 0%;
     padding: 3% 5%;
 
-    border-left: 1.5px solid black;
+    border-left: 1.5px solid #26221f;
 
     /* border: 1px solid orangered; */
 }
@@ -211,13 +222,13 @@
     .pageResponsibility .container-response .rpns-title {
         padding: 3.5% 8%;
 
-        border-right: 0px solid black;
-        border-bottom: #000000 solid 3px;
+        border-right: 0px solid #26221f;
+        border-bottom: #26221f solid 3px;
     }
     .pageRole .container-role .role-content,
     .pageResponsibility .container-response .rpns-content {
         padding: 3.5% 3%;
-        border-left: 0px solid black;   
+        border-left: 0px solid #26221f;   
     }
   }
 
@@ -228,13 +239,13 @@
     margin: 0%;
     padding: 0% 6%;
 
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #26221f;
 
     font-family: 'IBM Plex Mono', monospace;
 
-    background-color: #ffffff;
+    background-color: #e9e6e4;
     opacity: 1;
-    background-image: radial-gradient(#8f8f8f 0.55px, #ffffff 0.55px);
+    background-image: radial-gradient(#8f8f8f 0.55px, #e9e6e4 0.55px);
     background-size: 11px 11px;
 
     /* border: 1px solid red; */
@@ -253,7 +264,7 @@
     /* border: 1px solid greenyellow; */
 }
 .pageWhy .card {
-    border: #000000 0px solid;
+    border: #26221f 0px solid;
     background: none;
 }
 .pageWhy .banner-img img {
@@ -288,22 +299,22 @@
     margin: 0%;
     padding: 0% 6%;
 
-    /* border-bottom: 5px solid black; */
+    border-bottom: 5px solid #26221f;
 
     font-family: 'IBM Plex Mono', monospace;
 
-    background-color: #ffffff;
+    background-color: #e9e6e4;
     opacity: 1;
     background-size: 4px 4px;
-    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 0.4px, #ffffff 0, #ffffff 50%);
+    background-image: repeating-linear-gradient(-45deg, #26221f 0, #26221f 0.4px, #e9e6e4 0, #e9e6e4 50%);
     /* border: 1px solid red; */
 }
 .pageAttitude .container-attitude {
     padding: 3% 5%;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-left: 3px solid #26221f;
+    border-right: 3px solid #26221f;
 
-    background: white;
+    background: #e9e6e4;
 
     /* border: 1px solid blue; */
 }
@@ -319,7 +330,7 @@
 .pageAttitude .container-attitude .objective-att .objective-icon {
     /* padding: 2%; */
     margin: 6% auto 13% auto !important;
-    border: #000000 0px solid;
+    border: #26221f 0px solid;
 
     /* border: 1px solid orange; */
 }
@@ -332,4 +343,7 @@
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 6%;
+}
+.pageAttitude .card {
+    background: transparent;
 }
