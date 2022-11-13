@@ -247,7 +247,7 @@
     color: #26221f;
     margin-bottom: 30px;
 	  background:#e9e6e4;
-    transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1) !important;
 }
 .pageGallery .filter-button:hover,
 .pageGallery .filter-button:focus,
@@ -305,7 +305,7 @@
 } */
 .mondrian__item {
   filter:grayscale(0.8);
-  transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
+  transition: 0.4s cubic-bezier(.64,-0.01,.38,1) !important;
 }
 .mondrian__item:hover {
   filter:none;
