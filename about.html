@@ -35,23 +35,22 @@
 
 <body>
     <div class="big-box">
-        <!-- Start Header -->
+        <!-- Header -->
         <div class="pageHeader">
-            <a class="navbar-brand" href="home.html">
-                <div>
-                    <img class="img_logo_head" src="assets/img/logo/Logo_png.svg">
-                </div>
-            </a>
-            
-
-            <div class="textBox_contact">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;+44 (0) 7824 587488 <br> jirayut.viset@gmail.com</p>
+            <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand" href="home.html">
+                        <div>
+                            <img class="img_logo_head" src="assets/img/logo/Logo_png.svg">
+                        </div>
+                    </a>
+                    <div class="textBox_contact">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;+44 (0) 7824 587488 <br> jirayut.viset@gmail.com</p>
+                    </div>
             </div>
         </div>
-
         <!-- NavBar -->
         <div class="pageNav">
-            <nav class="mainNav navbar-expand-lg">
+            <nav class="container mainNav navbar-expand-lg">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="home.html">
                         <div class="hidden_logo">
@@ -102,75 +101,81 @@
         <!-- Close Header -->
 
         <!-- Start Banner Hero -->
-        <section class="pageIntro" data-aos="fade-right">
+        <section class="pageIntro">
             
             <div class="container-intro">
-                <div class="row d-flex">
-                    <div class="container-img col-lg-6">
-                        <img src="assets/img/profile/my_photo.jpeg">
-                    </div>
-                    <div class="container-text col-lg-6">
-                        <div class="row">
-                            <div class="text-title col-md-12">
-                                <h1>
-                                    About ME
-                                </h1>
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="container-img col-lg-6">
+                            <img src="assets/img/profile/my_photo.jpeg" data-aos="fade-up">
+                        </div>
+                        <div class="container-text col-lg-6">
+                            <div class="row">
+                                <div class="text-title col-md-12">
+                                    <h1 data-aos="fade-up">
+                                        About ME
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="text-paragraph col-md-12">
+                                    <p data-aos="fade-up">
+                                        I've got both design skills from architect experiences and coding skills from studying in Computer Science, therefore, I can combine these two backgrounds together.  I know how to write the codes and its limitations  which could make me design more appropriately.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="text-paragraph col-md-12">
-                                <p>
-                                    I've got both design skills from architect experiences and coding skills from studying in Computer Science, therefore, I can combine these two backgrounds together.  I know how to write the codes and its limitations  which could make me design more appropriately.
-                                </p>
-                            </div>
-                        </div>
+                        
                     </div>
-                    
                 </div>
+                
             </div>
         </section>
         <!-- End Banner Hero -->
 
         <!-- Start My Role -->
-        <section class="pageRole" data-aos="fade-left">
-            <div class="container-role d-lg-flex gx-5">
+        <section class="pageRole">
+            <!-- <div class="container"> -->
+                <div class="container container-role d-lg-flex gx-5">
 
-                <div class="role-title col-lg-4">
-                    <h2>My Role</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
+                    <div class="role-title col-lg-4" data-aos="fade-up">
+                        <h2>My Role</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <div class="role-content col-lg-8 row">
+                        <div class="role-list col-md-4">
+                            <img class="role-img img-fluid" src="assets/img/icons/transformation-2.png" alt="Card image" data-aos="fade-up">
+                            <div class="role-caption">
+                                <h5 data-aos="fade-up">UX/UI Designer</h5>
+                                <p data-aos="fade-up">(Current)</p>
+                                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
+                            </div>
+                        </div>
+                        <div class="role-list col-md-4">
+                            <img class="role-img img-fluid" src="assets/img/icons/house-plan.png" alt="Card image" data-aos="fade-up">
+                            <div class="role-caption">
+                                <h5 data-aos="fade-up">Architect</h5>
+                                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
+                            </div>
+                        </div>
+
                 </div>
-
-                <div class="role-content col-lg-8 row">
-                    <div class="role-list col-md-4">
-                        <img class="role-img img-fluid" src="assets/img/icons/transformation-2.png" alt="Card image">
-                        <div class="role-caption">
-                            <h5>UX/UI Designer</h5>
-                            <p>(Current)</p>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
-                        </div>
-                    </div>
-                    <div class="role-list col-md-4">
-                        <img class="role-img img-fluid" src="assets/img/icons/house-plan.png" alt="Card image">
-                        <div class="role-caption">
-                            <h5>Architect</h5>
-                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
-                        </div>
-                    </div>
-
-            </div>
+            <!-- </div> -->
+            
         </section>
         <!-- End My Role -->
 
         <!-- Start My Responsibility -->
-        <section class="pageResponsibility" data-aos="fade-right">
-            <div class="container-response d-lg-flex gx-5">
+        <section class="pageResponsibility">
+            <div class="container container-response d-lg-flex gx-5">
 
                 <div class="rpns-title col-lg-4">
-                    <h2>What I can do</h2>
-                    <p>
+                    <h2 data-aos="fade-up">What I can do</h2>
+                    <p data-aos="fade-up">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
@@ -178,16 +183,16 @@
 
                 <div class="rpns-content col-lg-8 row">
                     <div class="rpns-list col-md-4">
-                        <img class="rpns-img img-fluid" src="assets/img/icons/figma.png" alt="Card image">
+                        <img class="rpns-img img-fluid" src="assets/img/icons/figma.png" alt="Card image" data-aos="fade-up">
                         <div class="rpns-caption">
-                            <h5>Design</h5>
+                            <h5 data-aos="fade-up">Design</h5>
                             <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
                         </div>
                     </div>
                     <div class="rpns-list col-md-4">
-                        <img class="rpns-img img-fluid" src="assets/img/icons/html.png" alt="Card image">
+                        <img class="rpns-img img-fluid" src="assets/img/icons/html.png" alt="Card image" data-aos="fade-up">
                         <div class="rpns-caption">
-                            <h5>Development</h5>
+                            <h5 data-aos="fade-up">Development</h5>
                             <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
                         </div>
                     </div>
@@ -196,15 +201,15 @@
         <!--End My Responsibility -->
 
         <!-- Start Why ME? -->
-        <section class="pageWhy" data-aos="fade-left">
-            <div class="container-why">
+        <section class="pageWhy">
+            <div class="container container-why">
                 <div class="row">
                     <div class="banner-img col-lg-6 card">
-                        <img src="assets/img/icons/coorperation.png">
+                        <img src="assets/img/icons/coorperation.png" data-aos="fade-up">
                     </div>
                     <div class="banner-content col-lg-6 align-self-center">
-                        <h2>Why ME?</h2>
-                        <p>
+                        <h2 data-aos="fade-up">Why ME?</h2>
+                        <p data-aos="fade-up">
                         You are allowed to download and use this Purple Buzz template for your websites. You are <strong>not allowed</strong> to re-distribute this template ZIP file on other template websites. It is quite easy to simply copy and repost the ZIP file on any <a rel="nofollow" href="https://www.google.com/search?q=free+css" target="_blank">Free CSS collection</a> websites.</p>
                     </div>
                 </div>
@@ -213,26 +218,26 @@
         <!-- End Why ME? -->
 
         <!-- Start My Vision -->
-        <section class="pageAttitude" data-aos="fade-right">
-            <div class="container-attitude">
+        <section class="pageAttitude">
+            <div class="container container-attitude">
                 <div class="row text-center">
 
                     <div class="objective-att col-lg-4">
                         <div class="objective-icon card m-auto mb-2 mb-sm-4">
-                            <img src="assets/img/icons/Vision.png">
+                            <img src="assets/img/icons/Vision.png" data-aos="fade-up">
                         </div>
-                        <h2>My Vision</h2>
-                        <p>
+                        <h2 data-aos="fade-up">My Vision</h2>
+                        <p data-aos="fade-up">
                             Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse commodo viverra.
                         </p>
                     </div>
 
                     <div class="objective-att col-lg-4">
                         <div class="objective-icon card m-auto mb-2 mb-sm-4">
-                            <img src="assets/img/icons/Goal.png">
+                            <img src="assets/img/icons/Goal.png" data-aos="fade-up">
                         </div>
-                        <h2>My Goal</h2>
-                        <p>
+                        <h2 data-aos="fade-up">My Goal</h2>
+                        <p data-aos="fade-up">
                             Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam quis.
                         </p>
@@ -240,10 +245,10 @@
 
                     <div class="objective-att col-lg-4">
                         <div class="objective-icon card m-auto mb-2 mb-sm-4">
-                            <img src="assets/img/icons/Future.png">
+                            <img src="assets/img/icons/Future.png" data-aos="fade-up">
                         </div>
-                        <h2>My Future</h2>
-                        <p>
+                        <h2 data-aos="fade-up">My Future</h2>
+                        <p data-aos="fade-up">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             sed do eiusmod tempor.
                         </p>
@@ -261,7 +266,7 @@
         <!-- Start Footer -->
         <footer class="pageFooter text-white text-center text-lg-start" style="background-color: #23242a;">
             <!-- Grid container -->
-            <div class="container-xl p-4" data-aos="zoom-out">
+            <div class="container-xl p-4">
                 <!--Grid row-->
                 <div class="row mt-4">
                     <!--Grid column-->

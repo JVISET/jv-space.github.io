@@ -16,6 +16,12 @@
 
     /* border: 1px solid red; */
 }
+.pageIntro .container {
+    border-left: 3px solid #26221f;
+    border-right: 3px solid #26221f;
+
+    background:#e9e6e4 ;
+}
 .pageIntro .container-intro {
     margin: 0%;
     padding: 0% 6%;
@@ -91,8 +97,7 @@
   /* Adjust narrow screen (<992px)*/
   @media only screen and (max-width: 992px) {
     .pageIntro {
-        position: relative;
-        top: 64px;
+        margin-top: 50px !important;
         border-top: 1px solid ;
       }
     .pageIntro .container-img {
@@ -119,12 +124,6 @@
         padding: 3.5% 8%;
     }
   }
-  /* Adjust narrow screen (<700px)*/
-  @media only screen and (max-width: 700px) {
-    .pageIntro {
-        top: 62px;
-      }
-    }
     /* Adjust narrow screen (<470px)*/
     @media only screen and (max-width: 470px) {
         .pageIntro .container-img img {
@@ -167,7 +166,7 @@
     margin: 0%;
     padding: 5%;
 
-    border-right: 1.5px solid #26221f;
+    /* border-right: 1.5px solid #26221f; */
 
     /* border: 1px solid green; */
 }
@@ -176,7 +175,7 @@
     margin: 0%;
     padding: 3% 5%;
 
-    border-left: 1.5px solid #26221f;
+    border-left: 2.5px solid #26221f;
 
     /* border: 1px solid orangered; */
 }
@@ -218,6 +217,10 @@
 
   /* Adjust narrow screen (<992px)*/
   @media only screen and (max-width: 992px) {
+    /* .pageRole {
+        position: relative;
+        top: 66px !important;
+    } */
     .pageRole .container-role .role-title,
     .pageResponsibility .container-response .rpns-title {
         padding: 3.5% 8%;
