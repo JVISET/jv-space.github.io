@@ -186,28 +186,24 @@
     }
   }
   @media only screen and (max-width: 500px) {
-    .pageIntro .mondrian_item:nth-child(1),
-    .pageIntro .mondrian_item:nth-child(4),
-    .pageIntro .mondrian_item:nth-child(8),
-    .pageIntro .mondrian_item:nth-child(9),
-    .pageIntro .mondrian_item:nth-child(10),
-    .pageIntro .mondrian_item:nth-child(12),
-    .pageIntro .mondrian_item:nth-child(14),
-    .pageIntro .mondrian_item:nth-child(15){
+    .pageIntro .mondrian_item {
       /* visibility: hidden !important; */
-      display: none !important;
+      display: none;
     }
     .pageIntro .mondrian-box {
       grid-template-columns: repeat(auto-fit,minmax(50px,100px));
       /* display: none; */
     }
-    .pageIntro .mondrian_item:nth-child(6) h4 span {
+    .pageIntro .mondrian_item:nth-child(6){
+      display:block !important;
       font-size: 15vw !important;
     }
-    .pageIntro .mondrian_item:nth-child(11) h4 span {
+    .pageIntro .mondrian_item:nth-child(11) {
+      display:block !important;
       font-size: 5vw !important;
     }
-    .pageIntro .mondrian_item:nth-child(17) h4 span {
+    .pageIntro .mondrian_item:nth-child(17) {
+      display:block !important;
       font-size: 6vw !important;
     }
   }
@@ -232,7 +228,7 @@
       font-size: 42px !important;
     }
   }
-
+ 
 /* Start Gallery Section ----------------------------------------------------------- */
 .pageGallery {
     position: relative !important;
