@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+:root {
+  /* variables */
+  --white: #faf8f7;
+  --clay: #e9e6e4;
+  --red: #FF4E42;
+  --yellow: #ffc024;
+  --blue: #1820EF;
+  --black: #26221f;
+  --shadow: #151210;
+}
 *{
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
@@ -25,7 +34,7 @@ body {
   height: 100%;
   place-content: center;
   font-family: system-ui, sans-serif;
-  background: #e9e6e4;
+  background: var(--clay);
   color: #26221f;
 }
 
@@ -161,6 +170,7 @@ a {
 /* Adjust narrow screen (<500px)*/
 @media only screen and (max-width: 500px) {
   .pageNav {
+    display: block;
     padding-top: 0% !important;
     top: -5px !important;
   }

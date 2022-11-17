@@ -2,21 +2,27 @@
 <html lang="en">
 
 <head>
-    <title>Purple Buzz - Work Detail Page</title>
+    <title>Work-Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="apple-touch-icon" href="assets/img/favicon_io/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon_io/favicon.ico">
     <!-- Load Require CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font CSS -->
     <link href="assets/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
     <!-- Load Tempalte CSS -->
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/01.00.Template_Design.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/01.04.01.WorkPage-Design-work1.css">
 
 </head>
 
@@ -35,54 +41,79 @@
                     </div>
             </div>
         </div>
-        <!-- Start Nav -->
-        <nav id="main_nav" class="navbar navbar-expand-lg">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand h1" href="index.html">
-                    <i class='bx bx-buildings bx-sm text-dark'></i>
-                    <span class="text-dark h4">Purple</span> <span class="text-primary h4">Buzz</span>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
-                    <div class="flex-fill mx-xl-5 mb-2">
-                        <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
-                            <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Work</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="navbar align-self-center d-flex">
-                        <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
-                        <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
-                        <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
-                    </div>
+        <!-- NavBar -->
+        <div class="pageNav">
+            <nav class="container mainNav navbar-expand-lg">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="home.html">
+                        <div class="hidden_logo">
+                            <img class="img_logo_head" src="assets/img/logo/Logo_png.svg">
+                        </div> 
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon">
+                            <svg viewBox="0 0 80 65" width="40" height="40">
+                                <rect width="80" height="8" rx="5"></rect>
+                                <rect y="20" width="80" height="8" rx="5"></rect>
+                                <rect y="40" width="80" height="8" rx="5"></rect>
+                            </svg> 
+                        </span>
+                    </button>
                 </div>
-            </div>
-        </nav>
-        <!-- Close Nav -->
-
+                <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex">
+                    <ul class="nav navbar-nav d-flex mx-xl-5 text-center">
+                        <a class="nav-link" href="home.html">
+                            <li class="NavBar">
+                                <h1 class="Nav" id="N00">Home</h1>
+                            </li>
+                        </a>
+                        <a class="nav-link" href="resume.html">
+                            <li class="NavBar">
+                                <h1 class="Nav" id="N00">Resume</h1>
+                            </li>
+                        </a>
+                        <a class="nav-link" href="work.html" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <li class="NavBar">
+                                <h1 class="Nav" id="N00">Works&nbsp;<span class="dropdown-toggle"></span></h1>
+                            </li>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown07">
+                            <!-- <div> -->
+                                <a class="subNavBar-all subNavBar-nested dropdown-item justify-content-center" href="work.html">
+                                    <h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16"> <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"/> </svg>
+                                        <div>Back to <b>Works</b> Page</div> 
+                                    </h6>
+                                </a>
+                            <!-- </div> -->
+                            <a class="subNavBar-nested dropdown-item" href="work-web_port.html"><h5 class="subNav text-left"><i class='bx-fw bx bxs-chevron-right bx-xs'></i>&nbsp;Portfolio Website</h5></a>
+                            <a class="subNavBar-nested dropdown-item" href="#"><h5 class="subNav text-left"><i class='bx-fw bx bxs-chevron-right bx-xs'></i>&nbsp;HARN Building Control App</h5></a>
+                            <a class="subNavBar-nested dropdown-item" href="#"><h5 class="subNav text-left"><i class='bx-fw bx bxs-chevron-right bx-xs'></i>&nbsp;Lighting Reality App</h5></a>
+                            <a class="subNavBar-nested dropdown-item" href="#"><h5 class="subNav text-left"><i class='bx-fw bx bxs-chevron-right bx-xs'></i>&nbsp;UI Website Design</h5></a>
+                            <a class="subNavBar-nested dropdown-item" href="#"><h5 class="subNav text-left"><i class='bx-fw bx bxs-chevron-right bx-xs'></i>&nbsp;UI App Design</h5></a>
+                            <a class="subNavBar-nested dropdown-item" href="#"><h5 class="subNav text-left"><i class='bx-fw bx bxs-chevron-right bx-xs'></i>&nbsp;???</h5></a>
+                        </div>
+                        <a class="nav-link" href="gallery.html">
+                            <li class="NavBar">
+                                <h1 class="Nav" id="N00">Gallery</h1>
+                            </li>
+                        </a>
+                        <a class="nav-link" href="about.html">
+                            <li class="NavBar">
+                                <h1 class="Nav" id="N00">About</h1>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Close Header -->
 
         <!-- Start Banner Hero -->
-        <div id="work_single_banner" class="bg-light w-100">
-            <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
+        <div class="pageIntro border border-dark border-5 border-top-0 border-end-0 border-start-0 border-bottom w-100">
+            <div class="container-fluid text-dark d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
                 <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
-                    <h1 class="banner-heading h2 pb-5 typo-space-line-center">Digital Marketing</<h1>
-                    </h1>
+                    <h1 class="pb-3">Portfolio Website Design</h1>
                     <h3 class="h4 pb-2 light-300">Voluptatem accusantium doloremque</h3>
                     <p class="banner-footer light-300">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -255,13 +286,13 @@
 
             <div class="row">
                 <div class="col-md-8 m-auto text-left justify-content-center">
-                    <p class="display-6 py-4 ps-4 border border-5 border-top-0 border-end-0 border-bottom-0 border-start">
+                    <!-- <p class="display-6 py-4 ps-4 border border-5 border-top-0 border-end-0 border-bottom-0 border-start">
                         <i>
                             "Vestibulum vestibulum est eu lorem laoreet suscipit. Duis auctor,
                             metus vel sollicitudin hendrerit, elit neque pulvinar magna, non
                             sodales orci turpis blandit quam."
                         </i>
-                    </p>
+                    </p> -->
                     <p class="text-muted light-300">
                         Nam tortor quam, aliquet vel nibh sit amet, faucibus bibendum nisl.
                         Donec vehicula nulla justo, vel sodales massa vestibulum nec. Praesent
@@ -274,13 +305,23 @@
             </div><!-- End Qute -->
 
 
-            <div class="row justify-content-center">
-                <div class="col-lg-8 pt-4 pb-4">
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1z--ZRS5x5U" allowfullscreen></iframe>
-                    </div>
+            <div class="row justify-content-center pb-4">
+                <div class="col-lg-8 pt-4">
+                    <!-- <div class="ratio ratio-16x9"> -->
+                        <!-- Compare images -->
+                        <div class="card mb-3 embed-responsive-item img-comp-container">
+                            <div class="img-comp-img">
+                                <img src="assets/img/contents/Mockup/Mock4.jpeg" width="720" height="480">
+                            </div>
+                            <div class="img-comp-img img-comp-overlay">
+                                <img src="assets/img/contents/Mockup/Mock2.jpeg" width="720" height="480">
+                            </div>
+                        </div>
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1z--ZRS5x5U" allowfullscreen></iframe> -->
+                    <!-- </div> -->
                 </div>
-            </div><!-- End Video -->
+            </div>
+            <!-- End Video -->
 
             <div class="row justify-content-center">
                 <div class="col-lg-8 ml-auto mr-auto pt-3 pb-4">
@@ -297,150 +338,7 @@
             </div>
             <!-- End Work Sigle -->
 
-            <!-- Start Comment -->
-            <div class="row justify-content-center">
-                <div class="worksingle-comment-heading col-8 m-auto pb-3">
-                    <h4 class="h5">Comments</h4>
-                </div>
-            </div>
-
-            <div class="row pb-4">
-                <div class="worksingle-comment-body col-md-8 m-auto">
-                    <div class="d-flex">
-                        <div>
-                            <img class="rounded-circle" src="./assets/img/team-05.jpg" style="width: 50px;">
-                        </div>
-                        <div class="comment-body">
-                            <div class="comment-header d-flex justify-content-between ms-3">
-                                <div class="header text-start">
-                                    <h5 class="h6">John Doe</h5>
-                                    <p class="text-muted light-300">10 mins ago</p>
-                                </div>
-                                <a href="#" class="text-decoration-none text-secondary"><i class='bx bxs-share me-2'></i>Reply</a>
-                            </div>
-                            <div class="footer">
-                                <div class="card-body border ms-3 light-300">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Comment -->
-
-
-            <div class="row pb-4">
-                <div class="col-lg-8 m-auto">
-                    <div class="d-flex">
-                        <div>
-                            <img class="rounded-circle" src="./assets/img/team-01.jpg" style="width: 50px;">
-                        </div>
-                        <div class="comment-body">
-                            <div class="comment-header d-flex justify-content-between ms-3">
-                                <div class="header text-start">
-                                    <h5 class="h6">Jane Doe</h5>
-                                    <p class="text-muted light-300">5 mins ago</p>
-                                </div>
-                                <a href="#" class="text-decoration-none text-secondary"><i class='bx bxs-share me-2'></i>Reply</a>
-                            </div>
-                            <div class="footer">
-                                <div class="card-body border ms-3 light-300">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Comment -->
-
-
-            <div class="row pb-4">
-                <div class="col-lg-8 m-auto">
-                    <div class="d-flex ml-4">
-                        <div>
-                            <img class="rounded-circle" src="./assets/img/team-05.jpg" style="width: 50px;">
-                        </div>
-                        <div class="comment-body">
-                            <div class="comment-header d-flex justify-content-between ms-3">
-                                <div class="header text-start">
-                                    <h5 class="h6">John Doe</h5>
-                                    <p class="text-muted light-300">15 mins ago</p>
-                                </div>
-                                <a href="#" class="text-decoration-none text-secondary"><i class='bx bxs-share me-2'></i>Reply</a>
-                            </div>
-                            <div class="footer">
-                                <div class="card-body border ms-3 light-300">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Comment -->
-
-
-            <div class="row pb-4">
-                <div class="col-lg-8 m-auto">
-                    <div class="d-flex ml-5">
-                        <div>
-                            <img class="rounded-circle" src="./assets/img/team-01.jpg" style="width: 50px;">
-                        </div>
-                        <div class="comment-body">
-                            <div class="comment-header d-flex justify-content-between ms-3">
-                                <div class="header text-start">
-                                    <h5 class="h6">Jane Doe</h5>
-                                    <p class="text-muted light-300">16 mins ago</p>
-                                </div>
-                                <a href="#" class="text-decoration-none text-secondary"><i class='bx bxs-share me-2'></i>Reply</a>
-                            </div>
-                            <div class="footer">
-                                <div class="card-body border ms-3 light-300">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Comment -->
-
-
-            <div class="row pb-4">
-                <div class="worksingle-comment-footer col-lg-8 m-auto">
-                    <h4 class="h5">Leave Comment</h4>
-                    <form class="col-md-12 m-auto" method="POST" action="#" role="form">
-
-                        <div class="form-group">
-                            <label class="pb-2 pt-sm-0 pt-4 light-300" for="inputmessage">Your Comment</label>
-                            <textarea class="form-control form-control-lg light-300" id="inputmessage" name="inputmessage" placeholder="Your Comment" rows="5"></textarea>
-                        </div>
-
-                        <div class="row py-4">
-                            <div class="col-lg-6">
-                                <label class="pb-2 light-300" for="inputname">Name</label>
-                                <input type="text" class="form-control form-control-lg light-300" id="inputname" name="inputname" placeholder="Name">
-                            </div>
-                            <div class="col-lg-6">
-                                <label class="pb-2 pt-sm-0 pt-4 light-300" for="inputemail">Email</label>
-                                <input type="email" class="form-control form-control-lg light-300" id="inputemail" name="inputemail" placeholder="Email">
-                            </div>
-                        </div>
-
-                        <div class="form-row pt-2">
-                            <div class="col-md-12 col-10 text-end">
-                                <button type="submit" class="btn btn-secondary text-white px-md-4 px-2 py-md-3 py-1 radius-0 light-300">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div><!-- End Comment Form -->
+            
 
 
         </section>
@@ -517,10 +415,14 @@
         <!-- End Related Post -->
 
 
+        <!-- GAP -->
+        <div class="gap"></div>
+        <!-- GAP -->
+
         <!-- Start Footer -->
         <footer class="pageFooter text-white text-center text-lg-start" style="background-color: #23242a;">
             <!-- Grid container -->
-            <div class="container-xl p-4" data-aos="zoom-out">
+            <div class="container-xl p-4">
                 <!--Grid row-->
                 <div class="row mt-4">
                     <!--Grid column-->
@@ -614,8 +516,68 @@
         </footer>
         <!-- End Footer --> 
     </div>
-     
+    
 
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing:"ease-in-out",
+            mirror:"true",
+        });
+    </script>          
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-143696783-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-143696783-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/css/blur.css" class="loom-blur-styles">
 
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -637,6 +599,10 @@
     <script src="assets/js/templatemo.js"></script>
     <!-- Custom -->
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/workPage-function-work1.js"></script>
+    <script>
+        initComparisons();
+    </script>
 
 </body>
 
