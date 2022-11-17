@@ -478,7 +478,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
   12% {
     background-color: var(--red);
     transform: translate(0%, 5%);
-    width: 102%;
+    width: 104%;
   }
   25% {
     background-color: var(--red);
@@ -488,30 +488,36 @@ button:active, button:focus, a:active, a:focus { outline: none; }
   30% {
     background-color: var(--yellow);
     transform: translate(5%, 105%);
+    -webkit-transform: translate(5%, 105%);
     width: 0.25%;
   }
   40% {
     background-color: var(--yellow);
     transform: translate(0%, 105%);
-    width: 7%;
+    -webkit-transform: translate(0%, 105%);
+    width: 10%;
   }
   50% {
     background-color: var(--yellow);
     transform: translate(0%, 105%);
+    -webkit-transform: translate(0%, 105%);
     width: 0.25%;
   }
   60% {
     background-color: var(--blue);
     transform: translate(0%, 225%);
+    -webkit-transform: translate(0%, 228%);
     width: 0.25%;
   }
   70% {
     background-color: var(--blue);
     transform: translate(0%, 225%);
-    width: 60%;
+    -webkit-transform: translate(0%, 228%);
+    width: 68%;
   }
   89% {
     transform: translate(-5%, 225%);
+    -webkit-transform: translate(-5%, 228%);
     background-color: var(--blue);
     z-index: 2;
     width: 0%;
@@ -528,11 +534,17 @@ button:active, button:focus, a:active, a:focus { outline: none; }
 @keyframes css {
   0% {
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    -webkit-text-stroke-color: var(--black);
     -webkit-text-stroke: 0.5px var(--black);
+    stroke: #26221f;
   }
   95% {
     color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    -webkit-text-stroke-color: var(--black);
     -webkit-text-stroke: 0.5px var(--black);
+    stroke: #26221f;
   }
 }
 
