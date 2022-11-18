@@ -178,7 +178,7 @@ button:active, button:focus, a:active, a:focus { outline: none; }
     font-size: 1rem !important;
     font-weight:410;
   }
-  .navbar-subNav .nav-item .dropdown-menu a h3:hover, .navbar-subNav .nav-item .dropdown-menu a h5:hover {
+  .navbar-subNav .nav-item .dropdown-menu a:hover h3, .navbar-subNav .nav-item .dropdown-menu a:hover h5 {
     color: #e9e6e4;
   }
   .navbar-subNav .nav-item .dropdown-menu > div:nth-child(1) > a:hover {
