@@ -488,5 +488,32 @@ text-align: right !important;
 /* -------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------------------------------- */
 
+.pagination .disabled svg {
+  color: lightgray;
+}
+.pagination li a {
+  background: var(--white);
+  border: #26221f 1.2px solid;
+  border-radius: 5px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.pagination li a p {
+  margin: 0%;
+  padding: 0%;
+}
+.pagination li a:hover {
+  background: var(--black);
+  transform: scale(1.04);
+}
+.pagination li a:hover p, .pagination li a:hover svg {
+  color: var(--white);
+}
+.pagination .active a {
+  background: var(--black) !important;
+  border: #26221f 1px solid !important;
+}
+.pagination .active p {
+  color: var(--white) !important;
+}
 
 

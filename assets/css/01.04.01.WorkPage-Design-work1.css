@@ -11,6 +11,11 @@
     --shadow: #151210;
   }
 
+  hr.featurette-divider {
+    border-top: 1.5px solid #26221f;
+    opacity: 1;
+  }
+
   
 .pageNav .NavBar .dropdown-toggle {
     display: none;
