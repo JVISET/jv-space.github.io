@@ -43,6 +43,7 @@ a {
   text-decoration: none !important;
   display: inline-block;
   z-index: 1;
+  outline: none !important; 
 }
 
 .big-box {

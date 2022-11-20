@@ -15,7 +15,14 @@
     border-top: 1.5px solid #26221f;
     opacity: 1;
   }
-
+  li > a {
+    transition: transform 0.5s cubic-bezier(.64,-0.01,.38,1);
+  }
+  li > a:focus, li > a:active {
+    outline: none !important; 
+    box-shadow: none !important;
+    transform: scale(0.985) !important;
+  }
   
 .pageNav .NavBar .dropdown-toggle {
     display: none;
@@ -180,30 +187,12 @@
     opacity: 0.7;
     border-radius: 50%;
 }
-/* .comparison-slider-wrapper .comparison-slider .divider:after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    left: -5px;
-    top: 50%;
-    margin-top: -6px;
-    transform: rotate(45deg);
-    transition: all 0.1s ease-in-out;
-} */
 .comparison-slider-wrapper .comparison-slider .divider.draggable:before {
     width: 30px;
     height: 30px;
     left: -14px;
     margin-top: -15px;
 }
-/* .comparison-slider-wrapper .comparison-slider .divider.draggable:after {
-    width: 20px;
-    height: 20px;
-    left: -9px;
-    margin-top: -10px;
-    background-color: #555;
-} */
 .comparison-slider-wrapper .caption {
     position: relative;
     width: 100%;
@@ -212,3 +201,40 @@
     font-size: 12px;
     font-style: italic;
 }
+@media screen and (max-width: 992px) {
+    .pageIntro {
+        margin-top: 6% !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    p {
+        margin-top: 5% !important;
+        margin-bottom: 5%;
+    }
+    .p_text {
+        margin-bottom: 0% !important;
+    }
+    hr {
+        margin-top: 10% !important;
+    }
+    .pageWork > div > div, .pageWork > div {
+        margin: 0% !important;
+        padding: 0% !important;
+    }
+    .pageWork h2 {
+        text-align: center;
+    }
+    .design h4 {
+        text-align: center !important;
+    }
+    .text_explain > div {
+        border: none !important;
+        margin: 3% auto !important;
+        padding-left: 3% !important;
+        padding-right: 3% !important;
+    }
+    .tools_icon {
+        margin-top: 5% !important;
+        /* padding-top: 25% !important; */
+    }
+  }
