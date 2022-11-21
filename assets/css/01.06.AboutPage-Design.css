@@ -94,6 +94,12 @@
     font-weight: 300;
     line-height: 25px;
 }
+@media only screen and (max-width: 1400px) {
+    .intro-opinion {
+        display: none;
+    }
+}
+
   /* Adjust narrow screen (<992px)*/
   @media only screen and (max-width: 992px) {
     .pageIntro {
@@ -122,6 +128,9 @@
     .pageIntro .container-text .text-paragraph {
         margin: 0%;
         padding: 3.5% 8%;
+    }
+    .intro-opinion {
+        display: block;
     }
   }
     /* Adjust narrow screen (<470px)*/
@@ -206,6 +215,13 @@
 
     /* border: 1px solid orange; */
 }
+.pageRole .role-title p,
+.pageResponsibility .rpns-title p,
+.pageWhy p {
+    font-weight: 300;
+    text-align: justify !important;
+}
+
 .pageRole .container-role .role-content .role-caption p,
 .pageResponsibility .container-response .rpns-content .rpns-caption p {
     font-size: 16px;
