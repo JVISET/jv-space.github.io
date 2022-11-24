@@ -1306,18 +1306,18 @@
   }
   /* --------------------------------------------- */
   /* Figma */
-  .skill-software-figma {
+  .skill-software-figma, .skill-software-vsc {
     border-bottom: #26221f solid 1.5px;
   }
 
-  .skill-software-figma > div {
+  .skill-software-figma > div, .skill-software-vsc > div {
     width: 50%;
 
     margin: 0%;
     padding: 0%;
   }
 
-  .skill-software-figma .skillBar  {
+  .skill-software-figma .skillBar, .skill-software-vsc .skillBar {
     position: relative;
     width: 100%;
     right: 0%;
@@ -1332,7 +1332,7 @@
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-figma .skillBar .mySkill {
+  .skill-software-figma .skillBar .mySkill, .skill-software-vsc .skillBar .mySkill {
     height: 15px;
     width: 90%;
 
@@ -1345,18 +1345,18 @@
   }
   /* --------------------------------------------- */
   /* Skp */
-  .skill-software-skp {
+  .skill-software-skp, .skill-software-android_s {
     border-bottom: #26221f solid 1.5px;
   }
 
-  .skill-software-skp > div {
+  .skill-software-skp > div, .skill-software-android_s > div {
     width: 50%;
 
     margin: 0%;
     padding: 0%;
   }
 
-  .skill-software-skp .skillBar  {
+  .skill-software-skp .skillBar, .skill-software-android_s .skillBar  {
     position: relative;
     width: 100%;
     right: 0%;
@@ -1371,7 +1371,7 @@
     height: 15px;
     overflow: hidden;
   }
-  .skill-software-skp .skillBar .mySkill {
+  .skill-software-skp .skillBar .mySkill, .skill-software-android_s  .skillBar .mySkill {
     height: 15px;
     width: 85%;
 
