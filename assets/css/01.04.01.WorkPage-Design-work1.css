@@ -23,6 +23,13 @@
     box-shadow: none !important;
     transform: scale(0.985) !important;
   }
+
+  h2 {
+    font-weight: 420 !important;
+  }
+  h4 {
+    font-weight: 400 !important;
+  }
   
 .pageNav .NavBar .dropdown-toggle {
     display: none;
