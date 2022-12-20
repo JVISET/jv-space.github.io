@@ -274,6 +274,38 @@
         </section>
         <!-- End My Vision -->
 
+        <!-- Start Download -->
+        <button id="download-button">Download</button>
+
+        <script>
+          const downloadButton = document.getElementById('download-button');
+        
+          downloadButton.addEventListener('click', () => {
+            // Set the file to download
+            const fileUrl = 'https://example.com/path/to/file.pdf';
+        
+            // Create a link element
+            const link = document.createElement('a');
+        
+            // Set the link's href to the file URL
+            link.href = fileUrl;
+        
+            // Set the download attribute to the desired filename
+            link.download = 'My File.pdf';
+        
+            // Add the link to the DOM
+            document.body.appendChild(link);
+        
+            // Click the link to initiate the download
+            link.click();
+        
+            // Remove the link from the DOM
+            document.body.removeChild(link);
+          });
+        </script>
+        
+        <!-- End Download -->
+
         <!-- GAP -->
         <div class="gap"></div>
         <!-- GAP -->
