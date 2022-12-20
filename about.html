@@ -275,35 +275,45 @@
         <!-- End My Vision -->
 
         <!-- Start Download -->
-        <button id="download-button">Download</button>
-
-        <script>
-          const downloadButton = document.getElementById('download-button');
-        
-          downloadButton.addEventListener('click', () => {
-            // Set the file to download
-            const fileUrl = 'https://example.com/path/to/file.pdf';
-        
-            // Create a link element
-            const link = document.createElement('a');
-        
-            // Set the link's href to the file URL
-            link.href = fileUrl;
-        
-            // Set the download attribute to the desired filename
-            link.download = 'My File.pdf';
-        
-            // Add the link to the DOM
-            document.body.appendChild(link);
-        
-            // Click the link to initiate the download
-            link.click();
-        
-            // Remove the link from the DOM
-            document.body.removeChild(link);
-          });
-        </script>
-        
+        <div class="pageDownload py-5 border-bottom border-5 border-dark">
+            <div class="container text-center py-5" data-aos="fade-up">
+                <h4 class="pb-3">My CV file(PDF)</h4>
+                <button class="download_btn px-4 py-2" id="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                    Download
+                </button>
+    
+                <script>
+                  const downloadButton = document.getElementById('download-button');
+                
+                  downloadButton.addEventListener('click', () => {
+                    // Set the file to download
+                    const fileUrl = 'assets/files/Jirayut_Resume.pdf';
+                
+                    // Create a link element
+                    const link = document.createElement('a');
+                
+                    // Set the link's href to the file URL
+                    link.href = fileUrl;
+                
+                    // Set the download attribute to the desired filename
+                    link.download = 'Jirayut_CV.pdf';
+                
+                    // Add the link to the DOM
+                    document.body.appendChild(link);
+                
+                    // Click the link to initiate the download
+                    link.click();
+                
+                    // Remove the link from the DOM
+                    document.body.removeChild(link);
+                  });
+                </script>
+            </div>
+        </div>
         <!-- End Download -->
 
         <!-- GAP -->

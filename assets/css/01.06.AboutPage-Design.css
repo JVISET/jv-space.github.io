@@ -366,3 +366,35 @@
 .pageAttitude .card {
     background: transparent;
 }
+
+.pageDownload {
+    background-color: #e9e6e4;
+    opacity: 1;
+    background-image: radial-gradient(#8f8f8f 0.55px, #e9e6e4 0.55px);
+    background-size: 11px 11px;
+}
+.pageDownload h4{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 32px;
+    font-weight: 400;
+}
+.download_btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+
+    border: 1.5px solid #26221f;
+    border-radius: 50px;
+    background-color: #e9e6e4;
+    transition: 0.25s cubic-bezier(.64,-0.01,.38,1);
+}
+
+.download_btn:hover {
+    color: #e9e6e4;
+    background-color: #26221f;
+    scale: 1.05;
+}
+
+.download_btn:active {
+    scale: 0.98;
+}
