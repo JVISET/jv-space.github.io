@@ -420,6 +420,10 @@ a {
 
   /* border: blueviolet 1px solid; */
 }
+.footer_contact .line-app {
+  position: relative;
+  top: -9.5px;
+}
 
 .footer_logo i, .footer_site , .footer_contact i {
   font-weight: 100;
